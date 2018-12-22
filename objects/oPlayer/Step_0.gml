@@ -36,3 +36,23 @@ if (key_jump && extra_jump == 1 && vsp >= -1) {
 	vsp = vsp - 8;
 	extra_jump = 0;
 }
+
+
+// ANIMATION:
+// jump
+if (vsp < 0) {
+	sprite_index = sPlayerJump;
+	image_speed = 0;
+} else {
+	sprite_index = sPlayer;
+	image_speed = 0;
+}
+
+// flip left / right
+if (move == -1) {
+	image_xscale = -1;
+} else {
+	image_xscale = 1;
+}
+
+show_debug_overlay(true);
