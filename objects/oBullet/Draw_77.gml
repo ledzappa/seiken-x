@@ -1,8 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-hsp = 0;
-vsp = 0;
-grv = 0.3;
-walksp = 4;
-extra_jump = 0;
-pmove = 0;
+if (place_meeting(x, y, oWall)) {
+	instance_destroy();
+}

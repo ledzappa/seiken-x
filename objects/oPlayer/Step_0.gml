@@ -49,10 +49,14 @@ if (vsp < 0) {
 }
 
 // flip left / right
-if (move == -1) {
+if (move != 0) {
+	pmove = move;
+	if (move == -1) {
 	image_xscale = -1;
-} else {
-	image_xscale = 1;
+	} else {
+		image_xscale = 1;
+	}
 }
+
 
 show_debug_overlay(true);
