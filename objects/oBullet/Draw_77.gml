@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+//TEST
 // collision with walls
 var inst;
 inst = instance_place(x, y, oWallBreakable);
