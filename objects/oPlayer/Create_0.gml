@@ -1,5 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
 hsp = 0;
 vsp = 0;
 grv = 0.4;
@@ -11,6 +9,7 @@ dashtimer = 0;
 dashing = false;
 airdash = true;
 
-hp = 100;
+timer = 0;
+hp = 999;
 playerHurt = false;
 invincibleTimer = 0;
