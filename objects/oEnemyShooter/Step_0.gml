@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 vsp += oPlayer.grv;
+
 firingDelay--;
 
 if (place_meeting(x, y, oPlayer)) {
@@ -29,7 +30,7 @@ if (place_meeting(x, y + vsp, oWall)) {
 y = y + vsp;
 
 // fire bullet
-if (firingDelay < 0) {
+if (firingDelay < 0 && distance_to_object(oPlayer) < 500) {
 	firingDelay = 120;
 	with(instance_create_layer(x, y, "bullets", oBulletEnemy)) {
 		speed = 5;
