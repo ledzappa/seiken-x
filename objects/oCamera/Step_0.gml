@@ -8,7 +8,8 @@ if (instance_exists(follow)) {
 }
 
 // update object position
-x += (xTo - x + 100 * follow.pmove) / 10;
+//x += (xTo - x + 100 * follow.pmove) / 10;
+x += (xTo - x + 20 * follow.pmove) / 10;
 // y += (yTo - y - 50) / 10;
 
 // update camera view
