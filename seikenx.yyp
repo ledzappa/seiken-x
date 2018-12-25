@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "069dfb90-bab9-4ddc-9492-25b3e818fb51",
+            "Value": {
+                "id": "c0fc4954-c811-41fa-b69b-fd18205766be",
+                "resourcePath": "sprites\\sprite14\\sprite14.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0c217e62-a671-456d-af9e-a9192b9e6e95",
             "Value": {
                 "id": "6c94fa25-fe73-4abc-a4bf-3d20694ee685",
@@ -138,7 +146,7 @@
             "Key": "32aa9198-5a42-4aa4-92a5-e16e8c2486c4",
             "Value": {
                 "id": "4fa78310-746a-409c-a04b-234ecde2cde1",
-                "resourcePath": "sprites\\sprite10\\sprite10.yy",
+                "resourcePath": "sprites\\sWallBreakable\\sWallBreakable.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -340,6 +348,14 @@
                 "id": "17ef93b3-7682-46e5-8b37-780009692174",
                 "resourcePath": "sprites\\sPlayerJump\\sPlayerJump.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ba752771-7dcd-40fd-853d-76d0ca3070f7",
+            "Value": {
+                "id": "0ae6f056-212f-404c-a33a-21e79ad24432",
+                "resourcePath": "objects\\oWalls\\oWalls.yy",
+                "resourceType": "GMObject"
             }
         },
         {

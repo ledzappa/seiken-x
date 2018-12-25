@@ -28,7 +28,6 @@ if (place_meeting(x, y + vsp, oWall)) {
 }
 y = y + vsp;
 
-show_debug_message(firingDelay);
 // fire bullet
 if (firingDelay < 0) {
 	firingDelay = 120;

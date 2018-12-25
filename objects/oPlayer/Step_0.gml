@@ -5,18 +5,20 @@ key_jump = keyboard_check_pressed(vk_space);
 key_dash = keyboard_check_pressed(ord("Z"));
 
 var move = key_right - key_left;
+var isGrounded = place_meeting(x, y + 1, oWalls);
 hsp = move * walksp;
 vsp = vsp + grv;
 
-invincibleTimer = invincibleTimer - 1;
-dashtimer = dashtimer - 1;
+invincibleTimer--;
+dashtimer--;
+
 if (dashtimer < 0 && !airdash) {
 	walksp = 3;
 }
  
 // horizontal collision
-if (place_meeting(x + hsp, y, oWall)) {
-	while(!place_meeting(x + sign(hsp), y, oWall)) {
+if (place_meeting(x + hsp, y, oWalls)) {
+	while(!place_meeting(x + sign(hsp), y, oWalls)) {
 		x = x + sign(hsp);
 	}
 	hsp = 0;
@@ -24,8 +26,8 @@ if (place_meeting(x + hsp, y, oWall)) {
 x = x + hsp;
 
 // vertical collision
-if (place_meeting(x, y + vsp, oWall)) {
-	while(!place_meeting(x, y + sign(vsp), oWall)) {
+if (place_meeting(x, y + vsp, oWalls)) {
+	while(!place_meeting(x, y + sign(vsp), oWalls)) {
 		y = y + sign(vsp);
 	}
 	airdash = false;
@@ -34,7 +36,7 @@ if (place_meeting(x, y + vsp, oWall)) {
 y = y + vsp;
 
 // jump!
-if (key_jump && vsp == 0) {
+if (key_jump && vsp == 0 && isGrounded) {
 	vsp = vsp - 7;
 	extra_jump = 1;
 }

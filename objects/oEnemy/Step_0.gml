@@ -10,8 +10,8 @@ if (place_meeting(x, y, oPlayer)) {
 }
 
 // horizontal collision
-if (place_meeting(x + hsp, y, oWall)) {
-	while(!place_meeting(x + sign(hsp), y, oWall)) {
+if (place_meeting(x + hsp, y, oWalls)) {
+	while(!place_meeting(x + sign(hsp), y, oWalls)) {
 		x = x + sign(hsp);
 	}
 	hsp = -hsp;
@@ -19,8 +19,8 @@ if (place_meeting(x + hsp, y, oWall)) {
 x = x + hsp;
 
 // vertical collision
-if (place_meeting(x, y + vsp, oWall)) {
-	while(!place_meeting(x, y + sign(vsp), oWall)) {
+if (place_meeting(x, y + vsp, oWalls)) {
+	while(!place_meeting(x, y + sign(vsp), oWalls)) {
 		y = y + sign(vsp);
 	}
 	airdash = false;
