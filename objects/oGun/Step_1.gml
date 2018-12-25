@@ -1,11 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
-x = oPlayer.x;
+x = oPlayer.x + sign(oPlayer.image_xscale) * 4;
 y = oPlayer.y;
+shoot = keyboard_check_pressed(ord("X"));
+shoot = keyboard_check_pressed(ord("J"));
 
 firingDelay--;
 
-if (keyboard_check_pressed(ord("X")) && firingDelay < 0) {
+image_xscale = oPlayer.image_xscale;
+
+if (shoot && firingDelay < 0) {
 	firingDelay = 5;
 	with(instance_create_layer(x, y, "bullets", oBullet)) {
 		speed = 10;

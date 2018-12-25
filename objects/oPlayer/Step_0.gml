@@ -4,13 +4,24 @@ key_right = keyboard_check(vk_right);
 key_jump = keyboard_check_pressed(vk_space);
 key_dash = keyboard_check_pressed(ord("Z"));
 
+
+//Kimmo Input
+key_left = keyboard_check(ord("A"));
+key_right = keyboard_check(ord("D"));
+key_jump = keyboard_check_pressed(ord("K"));
+key_dash = keyboard_check_pressed(ord("L"));
+
 var move = key_right - key_left;
 var isGrounded = place_meeting(x, y + 1, oWalls);
 hsp = move * walksp;
 vsp = vsp + grv;
 
+timer++;
+if (timer > 500) timer = 0;
+
 invincibleTimer--;
 dashtimer--;
+if(dashtimer != 0) dashtimer = Approach(dashtimer,0,0.8)
 
 if (dashtimer < 0 && !airdash) {
 	walksp = 3;
@@ -36,33 +47,47 @@ if (place_meeting(x, y + vsp, oWalls)) {
 y = y + vsp;
 
 // jump!
-if (key_jump && vsp == 0 && isGrounded) {
-	vsp = vsp - 7;
-	extra_jump = 1;
+if (isGrounded){
+	if (vsp == 0) {
+		if (key_jump) {
+			
+			vsp = vsp - 7;
+			extra_jump = 1;
+		}
+	}
 }
 
 // jump again!
-if (oItems.doubleJump && key_jump && extra_jump == 1 && vsp >= -1) {
-	vsp = vsp - 7;
-	extra_jump = 0;
+
+if (oItems.doubleJump) {
+	if (extra_jump == 1) {
+		if (vsp > 1) {
+					if (key_jump) {
+			vsp = -7;
+			extra_jump = 0;
+					}
+		}
+	}
 }
 
 // dash
 if (oItems.dash && key_dash && dashtimer < 0 && !airdash) {
 	dashing = true;
-	dashtimer = 10;
+	dashtimer = 8;
 	walksp += 3;	
 }
 
 // ANIMATION:
 // jump
-if (vsp < 0) {
-	if (dashing) {
-		airdash = true;
+if (!isGrounded) {
+	if (vsp < 0) {
+		if (dashing) {
+			airdash = true;
+		}
+		if (!playerHurt) sprite_index = sPlayerJump;
+		image_speed = 0;
 	}
-	if (!playerHurt) sprite_index = sPlayerJump;
-	image_speed = 0;
-} else {
+}else {
 	if (!playerHurt) sprite_index = sPlayer;
 	image_speed = 0;
 }
@@ -93,3 +118,13 @@ if (invincibleTimer > 0 && !playerHurt) {
 
 show_debug_overlay(true);
 // show_debug_message(oCamera.y);
+
+
+
+//reset game
+
+if(keyboard_check_pressed(vk_enter)){game_restart();}
+
+//quit game
+
+if(keyboard_check_pressed(vk_escape)){game_end();}
