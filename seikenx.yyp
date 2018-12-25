@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "250ac43d-e7b4-4cfa-8162-d788ef81783f",
+            "Value": {
+                "id": "24351f2b-4611-4b22-891a-cc67afee287c",
+                "resourcePath": "views\\250ac43d-e7b4-4cfa-8162-d788ef81783f.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "2644b10a-27ad-48e0-8159-4c4d5e00a837",
             "Value": {
                 "id": "14e34f5f-3ca7-436b-8e50-133bf8372c9d",
@@ -103,11 +111,27 @@
             }
         },
         {
+            "Key": "2645d7b8-1f07-49b9-9b10-11ee80d1154f",
+            "Value": {
+                "id": "915c5fd9-10dc-41c9-9660-3ccbbb466657",
+                "resourcePath": "views\\2645d7b8-1f07-49b9-9b10-11ee80d1154f.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "2ef674b2-eec9-4dc3-a336-8eae3b06eb12",
             "Value": {
                 "id": "17f7342c-4e97-4c65-a8c5-3e218412d8de",
                 "resourcePath": "views\\2ef674b2-eec9-4dc3-a336-8eae3b06eb12.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "30ef64ce-b98d-4505-b95d-43a64f95cb6c",
+            "Value": {
+                "id": "e0018151-c510-412e-9982-236d9397c7b3",
+                "resourcePath": "objects\\oStatus\\oStatus.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -124,6 +148,22 @@
                 "id": "988ef536-9160-45ac-aac7-f31878ccfb1b",
                 "resourcePath": "sprites\\sprite8\\sprite8.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "46dae30a-a700-4a33-910f-72a45413e97b",
+            "Value": {
+                "id": "93d03d8d-2905-44b1-bd42-25496130ad91",
+                "resourcePath": "sprites\\sEnemyShooter\\sEnemyShooter.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "496ade53-1442-4b67-8d82-5c13b9656b99",
+            "Value": {
+                "id": "afee7d56-19ca-4b17-807f-52b09a0eef8b",
+                "resourcePath": "views\\496ade53-1442-4b67-8d82-5c13b9656b99.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -247,6 +287,14 @@
             }
         },
         {
+            "Key": "911bf0d6-8ffd-463c-84be-17d738167cab",
+            "Value": {
+                "id": "c92c2119-05e6-449d-b03e-9e5160d9ce73",
+                "resourcePath": "views\\911bf0d6-8ffd-463c-84be-17d738167cab.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "9eab6ee5-9c42-4803-9681-4102ea6122bf",
             "Value": {
                 "id": "fae4eefd-f95d-4634-bc9a-d38100d1f92b",
@@ -359,10 +407,26 @@
             }
         },
         {
+            "Key": "d5ccd1f9-b87b-4539-a7f9-34090233b60f",
+            "Value": {
+                "id": "c11cfc36-9c41-4f08-bbd8-ea26c7a0adc1",
+                "resourcePath": "objects\\oBulletEnemy\\oBulletEnemy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "db99abcf-2762-4841-9e30-92bae7331d11",
             "Value": {
                 "id": "5f5e6cf5-b119-4061-8fea-71e4fbbf2690",
                 "resourcePath": "views\\db99abcf-2762-4841-9e30-92bae7331d11.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "dfdb9a85-444b-4c14-a4b0-a4d1155fd54c",
+            "Value": {
+                "id": "0973338b-f3a1-4fc3-b4af-fbae8c5102bc",
+                "resourcePath": "views\\dfdb9a85-444b-4c14-a4b0-a4d1155fd54c.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -391,6 +455,14 @@
             }
         },
         {
+            "Key": "ef1d1d19-5b8a-4ade-b4cd-4b63ca27d7a0",
+            "Value": {
+                "id": "0a4d16d0-7ddd-4050-b02a-069b1117eff8",
+                "resourcePath": "objects\\oEnemyShooter\\oEnemyShooter.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f0676c01-9bbe-4b61-9123-4db6ba7bbbff",
             "Value": {
                 "id": "a61d2464-4338-4736-9c40-df04ef6cffb8",
@@ -404,6 +476,14 @@
                 "id": "e0afd698-4ac4-40b4-88eb-67b2483bb88d",
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "f4ef9f70-7f1a-4d4c-a027-788e8381bf5c",
+            "Value": {
+                "id": "9955b978-fc47-4837-b9fa-a48040461b49",
+                "resourcePath": "views\\f4ef9f70-7f1a-4d4c-a027-788e8381bf5c.yy",
+                "resourceType": "GMFolder"
             }
         }
     ],

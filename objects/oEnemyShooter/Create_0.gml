@@ -3,4 +3,6 @@
 hp = 5;
 dmg = 5;
 vsp = 0;
-hsp = 2;
+hsp = 0;
+
+firingDelay = 0;

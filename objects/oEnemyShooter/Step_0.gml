@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 vsp += oPlayer.grv;
+firingDelay--;
 
 if (place_meeting(x, y, oPlayer)) {
 	if (oPlayer.invincibleTimer < 0) {
@@ -23,7 +24,25 @@ if (place_meeting(x, y + vsp, oWall)) {
 	while(!place_meeting(x, y + sign(vsp), oWall)) {
 		y = y + sign(vsp);
 	}
-	airdash = false;
 	vsp = 0;
 }
 y = y + vsp;
+
+show_debug_message(firingDelay);
+// fire bullet
+if (firingDelay < 0) {
+	firingDelay = 120;
+	with(instance_create_layer(x, y, "bullets", oBulletEnemy)) {
+		speed = 5;
+		rnd = random_range(-3, 3);
+		direction = point_direction(x, y, oPlayer.x, oPlayer.y) + rnd;
+	}
+}
+
+// look left or right
+
+if (oPlayer.x < x) {
+	image_xscale = -1;
+} else {
+	image_xscale = 1;	
+}
