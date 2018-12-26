@@ -303,6 +303,14 @@
             }
         },
         {
+            "Key": "7f13e9d7-b997-4692-bb27-2e6680d5a418",
+            "Value": {
+                "id": "bc2ace02-50a6-4c3c-953c-f8a126c1b1bc",
+                "resourcePath": "objects\\oBulletCharge\\oBulletCharge.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "84faa8c4-c642-4892-a2dc-2a68fd3256b0",
             "Value": {
                 "id": "be5a6a74-9861-49a0-933a-14f159dbaafb",
@@ -332,6 +340,14 @@
                 "id": "98c02ad5-2d44-47ad-b2ec-b288e2d7d831",
                 "resourcePath": "objects\\oGun\\oGun.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "88b29745-e45b-46c6-90a4-4a8acbd9a918",
+            "Value": {
+                "id": "30afce83-d180-483a-8452-a34e712cc40b",
+                "resourcePath": "sprites\\sBulletCharge\\sBulletCharge.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

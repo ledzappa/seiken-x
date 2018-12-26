@@ -3,7 +3,7 @@
 
 timer--;
 
-image_alpha = timer/60;
+image_alpha = timer/40;
 
 // collision with player
 inst = instance_place(x, y, oPlayer);

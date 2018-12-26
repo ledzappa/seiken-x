@@ -1,9 +1,10 @@
-//Kimmo Input
+// input
 key_left = keyboard_check(ord("A"));
 key_right = keyboard_check(ord("D"));
 key_jump = keyboard_check_pressed(ord("K"));
 key_dash = keyboard_check_pressed(ord("L"));
 
+// standStill is set to true when shooting upwards
 if (!standStill) {
 	var move = key_right - key_left;
 } else {
@@ -48,7 +49,6 @@ y = y + vsp;
 if (isGrounded){
 	if (vsp == 0) {
 		if (key_jump) {
-			
 			vsp = vsp - 7;
 			extra_jump = 1;
 		}
@@ -56,16 +56,9 @@ if (isGrounded){
 }
 
 // jump again!
-
-if (oItems.doubleJump) {
-	if (extra_jump == 1) {
-		if (vsp > 1) {
-					if (key_jump) {
-			vsp = -7;
-			extra_jump = 0;
-					}
-		}
-	}
+if (oItems.doubleJump && key_jump && extra_jump == 1 && vsp >= 0) {
+	vsp = -7;
+	extra_jump = 0;
 }
 
 // dash
@@ -85,7 +78,7 @@ if (!isGrounded) {
 		if (!playerHurt) sprite_index = sPlayerJump;
 		image_speed = 0;
 	}
-}else {
+} else {
 	if (!playerHurt) sprite_index = sPlayer;
 	image_speed = 0;
 }
@@ -94,13 +87,13 @@ if (!isGrounded) {
 if (move != 0) {
 	pmove = move;
 	if (move == -1) {
-	image_xscale = -1;
+		image_xscale = -1;
 	} else {
 		image_xscale = 1;
 	}
 }
 
-// if outside camera-y
+// if outside camera-y or out-of-hp
 if (y > oCamera.y + 500 || hp < 0) {
 	room_restart();
 }
@@ -118,10 +111,12 @@ show_debug_overlay(true);
 
 
 
-//reset game
+// reset game
+if (keyboard_check_pressed(vk_enter)) {
+	game_restart(); 
+}
 
-if(keyboard_check_pressed(vk_enter)){game_restart();}
-
-//quit game
-
-if(keyboard_check_pressed(vk_escape)){game_end();}
+// quit game
+if (keyboard_check_pressed(vk_escape)) {
+	game_end();
+}

@@ -3,9 +3,9 @@
 key_left = keyboard_check(ord("A"));
 key_right = keyboard_check(ord("D"));
 key_top = keyboard_check(ord("W"));
-shoot = keyboard_check_pressed(ord("X"));
 shoot = keyboard_check_pressed(ord("J"));
-show_debug_message(key_top);
+shoot_hold = keyboard_check(ord("J"));
+shoot_release = keyboard_check_released(ord("J"));
 
 x = oPlayer.x + sign(oPlayer.image_xscale) * 4;
 y = oPlayer.y;
@@ -36,4 +36,16 @@ if (shoot && firingDelay < 0) {
 	}
 } else if (!other.key_top) {
 	oPlayer.standStill = false;
+}
+
+if (shoot_hold) {
+	preCharge++;
+} else {
+	preCharge = 0;
+	charge = 0;
+}
+
+if (preCharge > 50 && !instance_exists(oBulletCharge)) {
+	instance_create_layer(x, y, "bullets", oBulletCharge);
+	preCharge = 0;
 }
