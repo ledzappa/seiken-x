@@ -11,7 +11,9 @@ if (timer == turnTime) {
 	vsp = -vsp;
 }
 
-if (place_meeting(x, y, oPlayer)) {
+// tweak y-value here if player should leave the platform
+// for a short while when it's turning from the top
+if (place_meeting(x, y - 2, oPlayer)) {
 	with (oPlayer) {
 		onPlatform = true;
 		dst = abs(other.y - y);
@@ -28,14 +30,10 @@ if (place_meeting(x, y, oPlayer)) {
 		// give the player the same speed as the platform
 		// (as long as he doesn't jump)
 		if (!key_jump) {
-			vsp = other.vsp;
+			vsp = other.vsp;	
 			grv = 0;
 		}
 	}
 } else {
-	// back to normal when leaving the platform
-	with (oPlayer) {
-		grv = 0.4;
-		onPlatform = false;
-	}
+	// oPlayer resets gravity
 }

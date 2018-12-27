@@ -48,6 +48,12 @@ if (place_meeting(x, y + vsp, oWalls)) {
 }
 y = y + vsp;
 
+// reset gravity if not on platform
+if (!place_meeting(x, y + 10, oPlatforms)) {
+	grv = 0.4;
+	onPlatform = false;
+}
+
 #endregion
 // jump!
 if (isGrounded) {
