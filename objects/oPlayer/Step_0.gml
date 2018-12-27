@@ -11,7 +11,7 @@ if (!standStill) {
 	var move = 0;	
 }
 
-var isGrounded = place_meeting(x, y + 1, oWalls);
+var isGrounded = place_meeting(x, y + 1, oWalls) || place_meeting(x, y + 1, oVertical);
 var isLanded = place_meeting(x, y + sign(vsp), oWalls);
 hsp = move * walksp;
 vsp = vsp + grv;
@@ -22,7 +22,7 @@ invincibleTimer--;
 dashtimer--;
 if(dashtimer != 0) dashtimer = Approach(dashtimer,0,0.8)
 
-if (dashtimer < 0 && !airdash) {
+if (dashtimer < 0 && (!airdash || onPlatform)) {
 	walksp = 3;
 }
  
@@ -50,9 +50,10 @@ y = y + vsp;
 
 #endregion
 // jump!
-if (isGrounded){
-	if (vsp == 0) {
+if (isGrounded) {
+	if (vsp == 0 || onPlatform) {
 		if (key_jump) {
+			show_debug_message("jump!");
 			vsp = -7;
 			extra_jump = 1;
 		}
@@ -66,7 +67,7 @@ if (oItems.doubleJump && key_jump && extra_jump == 1 && vsp >= 0) {
 }
 
 // dash
-if (oItems.dash && key_dash && dashtimer < 0 && !airdash) {
+if (oItems.dash && key_dash && dashtimer < 0 && (!airdash || onPlatform)) {
 	dashing = true;
 	dashtimer = 8;
 	walksp += 3;	
@@ -80,21 +81,21 @@ if (isLanded) audio_play_sound(fxLandingSound,1000,false);
 // Run Animation
 if (isGrounded) {
 	if (move > 0 || move < 0) {
-			if (sprite_index != sPlayerRun) {
-				sprite_index = sPlayerRun;
-				image_index = 0;
-				image_speed = 1;
+		if (sprite_index != sPlayerRun) {
+			sprite_index = sPlayerRun;
+			image_index = 0;
+			image_speed = 1;
 		}
 	}
 }
 
-//Idle
-if(isGrounded) {
+// Idle
+if (isGrounded) {
 	if(move == 0) {
-				if (sprite_index != sPlayer) {
-					sprite_index = sPlayer;
-					image_index = 0;
-					image_speed = 1;
+		if (sprite_index != sPlayer) {
+			sprite_index = sPlayer;
+			image_index = 0;
+			image_speed = 1;
 		}
 	}
 }
@@ -114,12 +115,10 @@ if (!isGrounded) {
 	}
 }
 
-
-
-//Fall Animation
+// Fall Animation
 if(!isGrounded) {
-	if (vsp > 0){
-		//if(!playerHurt) { No hurt sprite  as for now
+	if (vsp > 0) {
+		// if(!playerHurt) { No hurt sprite  as for now
 			if (sprite_index != sPlayerFall) {
 				sprite_index = sPlayerFall;
 				image_index = 0;

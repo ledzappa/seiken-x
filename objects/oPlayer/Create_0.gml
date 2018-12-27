@@ -10,6 +10,7 @@ timer = 0;
 dashtimer = 0;
 dashing = false;
 standStill = false;
+onPlatform = false;
 airdash = true;
 
 hp = 100;
