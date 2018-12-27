@@ -11,7 +11,7 @@ if (!standStill) {
 	var move = 0;	
 }
 
-var isGrounded = place_meeting(x, y + 1, oWalls) || place_meeting(x, y + 1, oVertical);
+var isGrounded = place_meeting(x, y + 1, oWalls) || place_meeting(x, y + 2, oPlatforms);
 var isLanded = place_meeting(x, y + sign(vsp), oWalls);
 hsp = move * walksp;
 vsp = vsp + grv;
