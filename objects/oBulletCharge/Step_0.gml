@@ -31,6 +31,7 @@ if (shoot_hold && hsp == 0) {
 	audio_stop_sound(wBulletChargeFull);
 	if (!audio_is_playing(wBulletChargeShot) && charge == 100) {
 		audio_play_sound(wBulletChargeShot, 1, 0);
+
 	}
 	hsp = 8 * oPlayer.pmove;
 }
