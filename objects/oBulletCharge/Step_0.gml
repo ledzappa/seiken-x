@@ -2,6 +2,10 @@
 shoot_hold = keyboard_check(ord("J"));
 shoot_release = keyboard_check_released(ord("J"));
 
+//Make the charge approach to a spin
+increase_value = Approach(increase_value,16,0.05);
+image_angle = Approach(image_angle,image_angle+180,increase_value);
+
 if (hsp == 0) {
 	x = oGun.x + 30 * oPlayer.pmove;
 	y = oGun.y;
@@ -11,15 +15,18 @@ if (hsp == 0) {
 
 if (shoot_hold && hsp == 0) {
 	// play audio
-	if (!audio_is_playing(wBulletCharge) && charge == 0) {
-		audio_play_sound(wBulletCharge, 1, 0);
-	} else if (!audio_is_playing(wBulletCharge) && !audio_is_playing(wBulletChargeFull) && charge == 100) {
-		audio_play_sound(wBulletChargeFull, 1, 1000);
+	if (!audio_is_playing(chargeup) && charge == 0) {
+		len = audio_sound_length(chargeup);
+		audio_play_sound(chargeup, 100, 0);
+		alarm[0] = len * room_speed;
+		
+	} else if (!audio_is_playing(wBulletChargeFull)) {
+		
 	}
 	
 	// charge while not fully charged
 	if (charge < 100) {
-		charge++;
+		charge++;		
 	}
 	
 	// increase sprite size relative to charge
@@ -27,13 +34,13 @@ if (shoot_hold && hsp == 0) {
 	image_yscale = charge / 100;
 } else if (hsp == 0) {
 	// stop charge sound and play shot-sound on release
-	audio_stop_sound(wBulletCharge);
+	audio_stop_sound(chargeup);
 	audio_stop_sound(wBulletChargeFull);
 	if (!audio_is_playing(wBulletChargeShot) && charge == 100) {
 		audio_play_sound(wBulletChargeShot, 1, 0);
 
 	}
-	hsp = 8 * oPlayer.pmove;
+	hsp = 12 * oPlayer.pmove;
 }
 
 // collision with walls

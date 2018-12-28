@@ -1,0 +1,1 @@
+audio_play_sound(wBulletChargeFull, 100, true);
