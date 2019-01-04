@@ -1,8 +1,8 @@
 {
-    "id": "7dec9692-a834-4ea1-850d-3a922dab2cf0",
+    "id": "a00c6305-b25e-4b9d-9267-d7726e519f14",
     "modelName": "GMSound",
     "mvc": "1.0",
-    "name": "wEnemyHit",
+    "name": "fxSwitch1",
     "audioGroupGuid": "7b2c4976-1e09-44e5-8256-c527145e03bb",
     "bitDepth": 1,
     "bitRate": 128,
@@ -10,5 +10,5 @@
     "preload": false,
     "sampleRate": 44100,
     "type": 0,
-    "volume": 0.05
+    "volume": 1
 }

@@ -8,7 +8,7 @@ if inst != noone
 {    
 	inst.hp -= dmg;
 	IsHit = true;
-	audio_play_sound(wEnemyHit, 1, 0);
+	audio_play_sound(noone, 1000, 0);
 	if (inst.hp == 0) {
 		with (inst) {IsDead = true;}
 	}
@@ -22,8 +22,9 @@ if (place_meeting(x, y, oWall)) {
 // collision with enemies
 inst = instance_place(x, y, oEnemies);
 if inst != noone
-{    
-	audio_play_sound(wEnemyHit, 1, 0);
+{   
+
+	audio_play_sound(noone, 1000, 0);
 	inst.hp -= dmg;
 	if (inst.hp == 0) {
 		with (inst) {instance_destroy(); audio_play_sound(fxBrake,1000,false);}

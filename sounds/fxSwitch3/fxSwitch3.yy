@@ -1,8 +1,8 @@
 {
-    "id": "cca271d8-38de-4b75-a146-5c125a61e6ee",
+    "id": "f908e3f0-500b-4a79-ab9d-99c9edea1afa",
     "modelName": "GMSound",
     "mvc": "1.0",
-    "name": "wItemHP",
+    "name": "fxSwitch3",
     "audioGroupGuid": "7b2c4976-1e09-44e5-8256-c527145e03bb",
     "bitDepth": 1,
     "bitRate": 128,
