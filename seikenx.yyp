@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "3c26d111-b2b9-4501-847d-0e8070fbce16",
+            "Value": {
+                "id": "8e7e1b02-d9aa-487a-b5a2-69ff73f39614",
+                "resourcePath": "sounds\\fxSwitch2\\fxSwitch2.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "3d1eceee-acb7-4568-b782-cceb8f2ba091",
             "Value": {
                 "id": "f8dcf1fd-d756-41a3-b5de-4ddca25cfed4",
@@ -351,19 +359,19 @@
             }
         },
         {
-            "Key": "7dec9692-a834-4ea1-850d-3a922dab2cf0",
-            "Value": {
-                "id": "2573e4d5-7b41-4b3a-9224-72eee47fe58a",
-                "resourcePath": "sounds\\wEnemyHit\\wEnemyHit.yy",
-                "resourceType": "GMSound"
-            }
-        },
-        {
             "Key": "7f13e9d7-b997-4692-bb27-2e6680d5a418",
             "Value": {
                 "id": "bc2ace02-50a6-4c3c-953c-f8a126c1b1bc",
                 "resourcePath": "objects\\oBulletCharge\\oBulletCharge.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "82139fb1-1fab-418c-ae19-73c84cacc87d",
+            "Value": {
+                "id": "d538666c-b150-478b-8b60-333669a97f74",
+                "resourcePath": "sounds\\map2\\map2.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -471,6 +479,14 @@
             }
         },
         {
+            "Key": "a00c6305-b25e-4b9d-9267-d7726e519f14",
+            "Value": {
+                "id": "d3f18a97-1183-465d-90f2-fc92a751643c",
+                "resourcePath": "sounds\\fxSwitch1\\fxSwitch1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "a1472cbf-c1fa-4130-9ae5-40a7340cd889",
             "Value": {
                 "id": "febd267e-5408-422e-b735-6df7bbdbfbc8",
@@ -572,6 +588,14 @@
                 "id": "3a772f03-3950-4bee-967e-cc6be8e92ffe",
                 "resourcePath": "scripts\\Approach\\Approach.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c0cc55a7-a507-4eb1-aa4e-b240ca46ac21",
+            "Value": {
+                "id": "7f223f25-b18b-4266-9b04-92b6c51e391d",
+                "resourcePath": "objects\\oSoundControl\\oSoundControl.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -780,6 +804,14 @@
                 "id": "9955b978-fc47-4837-b9fa-a48040461b49",
                 "resourcePath": "views\\f4ef9f70-7f1a-4d4c-a027-788e8381bf5c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f908e3f0-500b-4a79-ab9d-99c9edea1afa",
+            "Value": {
+                "id": "751d8890-51ce-4ba0-b851-a58deb0adf75",
+                "resourcePath": "sounds\\fxSwitch3\\fxSwitch3.yy",
+                "resourceType": "GMSound"
             }
         },
         {
