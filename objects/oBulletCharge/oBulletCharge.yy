@@ -71,7 +71,22 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "828ea0fb-71a6-4b9f-8cbb-354b593dd135",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "wBulletChargeShot1",
+            "varName": "chargeKillSound",
+            "varType": 5
+        }
+    ],
     "solid": false,
     "spriteId": "88b29745-e45b-46c6-90a4-4a8acbd9a918",
     "visible": true

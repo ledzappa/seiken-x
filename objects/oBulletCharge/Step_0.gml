@@ -2,6 +2,12 @@
 shoot_hold = keyboard_check(ord("J"));
 shoot_release = keyboard_check_released(ord("J"));
 
+// To avoid crashing if no sound is chosen
+if(chargeKillSound != noone){
+	chargeKillSound = chargeKillSound;
+} else chargeKillSound = noone;
+
+
 //Make the charge approach to a spin
 increase_value = Approach(increase_value,16,0.05);
 image_angle = Approach(image_angle,image_angle+180,increase_value);
@@ -62,7 +68,7 @@ if (abs(x - oPlayer.x) > 500) {
 // collision with enemies
 inst = instance_place(x, y, oEnemies);
 if (inst != noone) {    
-	audio_play_sound(wEnemyHit, 1, 0);
+	audio_play_sound(chargeKillSound, 1, 0);
 	inst.hp -= charge;
 	if (inst.hp < 0) {
 		with (inst) instance_destroy();
