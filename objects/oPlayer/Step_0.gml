@@ -80,7 +80,9 @@ if (oItems.dash && key_dash && dashtimer < 0 && (!airdash || onPlatform)) {
 }
 
 //Land sound
-if (isLanded) audio_play_sound(fxLandingSound,1000,false);
+if(!audio_is_playing(fxLandingSound)){
+	if (isLanded) audio_play_sound(fxLandingSound,500,false);
+}
 
 /*##########################  ANIMATIONS /*##########################*/
 
