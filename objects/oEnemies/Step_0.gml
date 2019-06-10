@@ -1,11 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (outofview){
-  instance_deactivate_layer("enemies");
-} else {
-  instance_activate_layer("enemies");
-}
-
 vsp = vsp + grv;
 
 // vertical collision

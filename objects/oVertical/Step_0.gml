@@ -1,5 +1,5 @@
-var PlayerCarried = place_meeting(x,y-1,oPlayer);
-
+/// @description Insert description here
+// You can write your code in this editor
 key_jump = keyboard_check_pressed(ord("K"));
 timer++;
 
@@ -13,11 +13,11 @@ if (timer == turnTime) {
 
 // tweak y-value here if player should leave the platform
 // when it turns
-if (PlayerCarried) {
-	with (PlayerCarried) {
+if (place_meeting(x, y, oPlayer)) {
+	with (oPlayer) {
 		onPlatform = true;
-#region OLD CODE
 		dst = abs(other.y - y);
+		
 		// so the player doesn't land "inside" the platform
 		if (dst > 23 || dst < 22) {
 			if (other.y < y) {
@@ -35,11 +35,6 @@ if (PlayerCarried) {
 			vsp = other.vsp;	
 			grv = 0;
 		}
-#endregion
-			y = abs(other.bbox_top);
-			y -= abs(y - bbox_bottom);
-			y--;
-			vsp = 0;
 	}
 } else {
 	// oPlayer resets gravity
