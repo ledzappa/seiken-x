@@ -1,4 +1,4 @@
-if load {
+if (load && global.enableDebug) {
    var defaultSounds = audio_group_load_progress(audiogroup_default);
    var soundTrack = audio_group_load_progress(audiogroup_soundtrack);
    draw_set_font(fnt);
@@ -8,6 +8,4 @@ if load {
    draw_text(32, 64, "Loading default group: " + string(defaultSounds));
    draw_text(32, 80, "Loading soundtrack group: " + string(soundTrack));
    draw_text(32, 96, "Current audiogroup selected: " + string(switchGroup) + " = " + string(showText));
-
-
 }
