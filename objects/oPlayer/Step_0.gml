@@ -19,7 +19,8 @@ if (!standStill) {
 var isGrounded = place_meeting(x, y + 1, oWalls) || place_meeting(x, y + 2, oPlatforms);
 var isLanded = place_meeting(x, y + sign(vsp), oWalls);
 hsp = move * walksp;
-vsp = vsp + grv;
+vsp = clamp(vsp + grv, -7, 8);
+
 timer++;
 if (timer > 500) timer = 0;
 
@@ -28,7 +29,7 @@ dashtimer--;
 if(dashtimer != 0) dashtimer = Approach(dashtimer,0,0.8)
 
 if (dashtimer < 0 && (!airdash || onPlatform)) {
-	walksp = 3;
+	walksp = 2.5;
 }
  
  
@@ -81,7 +82,7 @@ if (oItems.doubleJump && key_jump && extra_jump == 1 && vsp >= 0) {
 if (oItems.dash && key_dash && dashtimer < 0 && (!airdash || onPlatform)) {
 	dashing = true;
 	dashtimer = 8;
-	walksp += 3;	
+	walksp += 2.5;	
 }
 
 //Land sound
@@ -164,9 +165,6 @@ if (invincibleTimer > 0 && !playerHurt) {
 }
 
 show_debug_overlay(true);
-// show_debug_message(oCamera.y);
-
-
 
 // reset game
 if (keyboard_check_pressed(vk_enter)) {

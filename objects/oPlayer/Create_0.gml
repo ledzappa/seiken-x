@@ -3,7 +3,7 @@
 hsp = 0;
 vsp = 0;
 grv = 0.4;
-walksp = 3;
+walksp = 2.5;
 extra_jump = 0;
 pmove = 0;
 timer = 0;
