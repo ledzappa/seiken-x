@@ -3,19 +3,18 @@
 
 timer--;
 
-image_alpha = timer/40;
+image_alpha = timer / 40;
 
 // collision with player
 inst = instance_place(x, y, oPlayer);
-if inst != noone
-{   
-	if (hit == false) {
-		oStatus.hp -= dmg;
-		oPlayer.invincibleTimer = 100;
-		hit = true;
-	}
+if (inst != noone) {
+  if (hit == false) {
+    oStatus.hp -= dmg;
+    oPlayer.invincibleTimer = 100;
+    hit = true;
+  }
 }
 
 if (timer < 0) {
-	instance_destroy();
+  instance_destroy();
 }
