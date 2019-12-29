@@ -5,7 +5,7 @@ firingDelay--;
 
 if (place_meeting(x, y, oPlayer)) {
 	if (oPlayer.invincibleTimer < 0) {
-		oStatus.hp -= dmg;
+		oPlayer.hp -= dmg;
 		oPlayer.invincibleTimer = 100;
 	}	
 }

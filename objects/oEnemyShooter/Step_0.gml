@@ -6,7 +6,7 @@ firingDelay--;
 
 if (place_meeting(x, y, oPlayer)) {
 	if (oPlayer.invincibleTimer < 0) {
-		oStatus.hp -= dmg;
+		oPlayer.hp -= dmg;
 		oPlayer.invincibleTimer = 100;
 	}	
 }
@@ -30,7 +30,7 @@ if (place_meeting(x, y + vsp, oWall)) {
 y = y + vsp;
 
 // fire bullet
-if (firingDelay < 0 && distance_to_object(oPlayer) < 500) {
+if (firingDelay < 0 && distance_to_object(oPlayer) < oEnemies.fireRange) {
 	firingDelay = 120;
 	with(instance_create_layer(x, y, "bullets", oBulletEnemy)) {
 		speed = 5;
