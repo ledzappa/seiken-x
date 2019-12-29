@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-vsp = vsp + oPlayer.grv;
+vsp = vsp + 0.5;
 
 // vertical collision
 if (place_meeting(x, y + vsp, oWalls)) {
