@@ -5,11 +5,10 @@ y = y + vsp;
 
 // collision with player
 inst = instance_place(x, y, oPlayer);
-if inst != noone
-{    
-	oPlayer.invincibleTimer = 100;
-	if (inst.hp == 0) {
-		room_restart();
-	}
-	instance_destroy();
+if (inst != noone) {
+  oPlayer.invincibleTimer = 100;
+  if (inst.hp == 0) {
+    room_restart();
+  }
+  instance_destroy();
 }
