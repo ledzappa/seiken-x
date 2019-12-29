@@ -4,17 +4,10 @@ vsp += oPlayer.grv;
 firingDelay--;
 
 if (place_meeting(x, y, oPlayer)) {
-<<<<<<< HEAD
 	if (oPlayer.invincibleTimer < 0) {
 		oPlayer.hp -= dmg;
 		oPlayer.invincibleTimer = 100;
 	}	
-=======
-  if (oPlayer.invincibleTimer < 0) {
-    oStatus.hp -= dmg;
-    oPlayer.invincibleTimer = 100;
-  }
->>>>>>> master
 }
 
 // horizontal collision

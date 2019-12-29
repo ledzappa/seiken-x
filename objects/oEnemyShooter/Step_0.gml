@@ -4,17 +4,10 @@ vsp += oPlayer.grv;
 firingDelay--;
 
 if (place_meeting(x, y, oPlayer)) {
-<<<<<<< HEAD
 	if (oPlayer.invincibleTimer < 0) {
 		oPlayer.hp -= dmg;
 		oPlayer.invincibleTimer = 100;
 	}	
-=======
-  if (oPlayer.invincibleTimer < 0) {
-    oStatus.hp -= dmg;
-    oPlayer.invincibleTimer = 100;
-  }
->>>>>>> master
 }
 
 // horizontal collision
@@ -36,7 +29,6 @@ if (place_meeting(x, y + vsp, oWall)) {
 y = y + vsp;
 
 // fire bullet
-<<<<<<< HEAD
 if (firingDelay < 0 && distance_to_object(oPlayer) < oEnemies.fireRange) {
 	firingDelay = 120;
 	with(instance_create_layer(x, y, "bullets", oBulletEnemy)) {
@@ -44,15 +36,6 @@ if (firingDelay < 0 && distance_to_object(oPlayer) < oEnemies.fireRange) {
 		rnd = random_range(-3, 3);
 		direction = point_direction(x, y, oPlayer.x, oPlayer.y) + rnd;
 	}
-=======
-if (firingDelay < 0 && distance_to_object(oPlayer) < 500) {
-  firingDelay = 120;
-  with (instance_create_layer(x, y, "bullets", oBulletEnemy)) {
-    speed = 5;
-    rnd = random_range(-3, 3);
-    direction = point_direction(x, y, oPlayer.x, oPlayer.y) + rnd;
-  }
->>>>>>> master
 }
 
 // look left or right
