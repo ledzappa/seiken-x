@@ -16,3 +16,7 @@ airdash = true;
 hp = 100;
 playerHurt = false;
 invincibleTimer = 0;
+
+doubleJump = false;
+doubleJumpTime = 1200; // 20s
+doubleJumpTimer = 0;
