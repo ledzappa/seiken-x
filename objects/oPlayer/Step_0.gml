@@ -59,12 +59,13 @@ if (!place_meeting(x, y + 10, oPlatforms)) {
 }
 
 // jump!
+
 if (isGrounded) {
   if (vsp == 0 || onPlatform) {
     if (key_jump) {
-      show_debug_message("jump!");
-      vsp = -7;
-      extra_jump = 1;
+		show_debug_message("jump!");
+	    vsp = -7;
+	    extra_jump = 1;
     }
   }
 }
@@ -120,6 +121,15 @@ if (!isGrounded) {
       image_index = 0;
       image_speed = 1;
     }
+	//Loop last frames of jumping animation
+	if(sprite_index == sPlayerJump)
+	{
+		if(round(image_index) > sprite_get_number(sprite_index))
+		{
+			image_index = 2;
+			image_index = clamp(image_index,2,sprite_get_number(sprite_index));
+		}
+	}
   }
 }
 
@@ -131,6 +141,15 @@ if (!isGrounded) {
       image_index = 0;
       image_speed = 1;
     }
+	//Loop last frames of jumping animation
+	if(sprite_index == sPlayerFall)
+	{
+		if(round(image_index) > sprite_get_number(sprite_index))
+		{
+			image_index = 2;
+			image_index = clamp(image_index,2,sprite_get_number(sprite_index));
+		}
+	}
   }
 }
 
