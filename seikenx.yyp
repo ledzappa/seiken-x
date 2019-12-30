@@ -671,6 +671,14 @@
             }
         },
         {
+            "Key": "c3bf02f4-3989-4f05-830c-6796285a5135",
+            "Value": {
+                "id": "3c762c76-8940-45f9-99c4-d45170c297c1",
+                "resourcePath": "sounds\\map4\\map4.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "c551d4a3-d0cb-4e28-ad5e-58b16cdb83ca",
             "Value": {
                 "id": "32468070-3f6c-4a13-88d4-8ed099638f5d",
