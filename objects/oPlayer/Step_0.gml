@@ -70,7 +70,7 @@ if (isGrounded) {
 }
 
 // jump again!
-if (oItems.doubleJump && key_jump && extra_jump == 1 && vsp >= 0) {
+if (doubleJump && key_jump && extra_jump == 1 && vsp >= 0) {
   vsp = -7;
   extra_jump = 0;
 }
@@ -160,6 +160,13 @@ if (invincibleTimer > 0 && !playerHurt) {
 }
 
 show_debug_overlay(true);
+
+if (doubleJump && doubleJumpTimer < doubleJumpTime) {
+  doubleJumpTimer++;
+} else {
+  doubleJumpTimer = 0;
+  doubleJump = false;
+}
 
 // reset game
 if (keyboard_check_pressed(vk_enter)) {
