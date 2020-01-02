@@ -402,7 +402,7 @@
             "Key": "84ec607e-ff48-4006-bd9b-bcab66caf247",
             "Value": {
                 "id": "82e3756d-9d10-495a-9aca-a2376b1315bc",
-                "resourcePath": "sprites\\sPlayerFall\\sPlayerFall.yy",
+                "resourcePath": "sprites\/sPlayerFall\/sPlayerFall.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -487,6 +487,14 @@
             }
         },
         {
+            "Key": "93573e32-7364-40c8-a08f-2da38f165e75",
+            "Value": {
+                "id": "39aaa9c3-1007-42b2-8f4b-beb8d089045d",
+                "resourcePath": "objects\/oEnemyFlyer\/oEnemyFlyer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "9ca1a0d5-a181-4e1a-afbb-088cda040faa",
             "Value": {
                 "id": "15688562-a0fc-4907-a1c6-b05525db8e6d",
@@ -562,7 +570,7 @@
             "Key": "a7950b04-8aa8-4c3c-94f0-e6c038382577",
             "Value": {
                 "id": "c9ffad7b-f613-444b-8180-c636fa2b8ce2",
-                "resourcePath": "sounds\\map3\\map3.yy",
+                "resourcePath": "sounds\/map3\/map3.yy",
                 "resourceType": "GMSound"
             }
         },
@@ -674,7 +682,7 @@
             "Key": "c3bf02f4-3989-4f05-830c-6796285a5135",
             "Value": {
                 "id": "3c762c76-8940-45f9-99c4-d45170c297c1",
-                "resourcePath": "sounds\\map4\\map4.yy",
+                "resourcePath": "sounds\/map4\/map4.yy",
                 "resourceType": "GMSound"
             }
         },
@@ -763,6 +771,14 @@
             "Value": {
                 "id": "b0ee6731-8a64-455f-a8d5-dd41ce777fbb",
                 "resourcePath": "sprites\/sItemHPSmall\/sItemHPSmall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d7d90610-e0fc-4671-b5ad-397a51046e18",
+            "Value": {
+                "id": "5846c3c7-0f0e-41dc-a7a4-901f931417de",
+                "resourcePath": "sprites\/sEnemyFlyer\/sEnemyFlyer.yy",
                 "resourceType": "GMSprite"
             }
         },

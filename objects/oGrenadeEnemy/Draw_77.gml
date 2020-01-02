@@ -7,6 +7,7 @@ y = y + vsp;
 inst = instance_place(x, y, oPlayer);
 if (inst != noone) {
   oPlayer.invincibleTimer = 100;
+  oPlayer.hp -= 10;
   if (inst.hp == 0) {
     room_restart();
   }
