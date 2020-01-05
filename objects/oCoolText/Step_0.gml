@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-alpha = 0;
-print = "";
-time = 0;
+// update position
 
-alarm[0] = 200;
+x = oCamera.x;
+y = oCamera.y - 75;

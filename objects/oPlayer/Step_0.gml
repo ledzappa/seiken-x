@@ -1,9 +1,5 @@
 // input
-key_left = -keyboard_check(ord("A"));
-key_right = keyboard_check(ord("D"));
-key_jump = keyboard_check_pressed(ord("K"));
-key_dash = keyboard_check_pressed(ord("L"));
-key_debug = keyboard_check_pressed(ord("Q"));
+scr_getinput();
 
 if (key_debug) {
   global.enableDebug = !global.enableDebug;
@@ -11,7 +7,7 @@ if (key_debug) {
 
 // standStill is set to true when shooting upwards
 if (!standStill) {
-  var move = key_right + key_left;
+  var move = key_right - key_left;
 } else {
   var move = 0;
 }
