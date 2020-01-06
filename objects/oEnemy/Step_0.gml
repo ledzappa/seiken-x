@@ -1,11 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
-vsp += oPlayer.grv;
+vsp += obj_player.grv;
 
-if (place_meeting(x, y, oPlayer)) {
-	if (oPlayer.invincibleTimer < 0) {
-		oPlayer.hp -= dmg;
-		oPlayer.invincibleTimer = 100;
+if (place_meeting(x, y, obj_player)) {
+	if (obj_player.invincibleTimer < 0) {
+		obj_player.hp -= dmg;
+		obj_player.invincibleTimer = 100;
 	}	
 }
 

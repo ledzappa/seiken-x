@@ -1,10 +1,10 @@
-vsp += oPlayer.grv;
+vsp += obj_player.grv;
 firingDelay--;
 
-if (place_meeting(x, y, oPlayer)) {
-	if (oPlayer.invincibleTimer < 0) {
-		oPlayer.hp -= dmg;
-		oPlayer.invincibleTimer = 100;
+if (place_meeting(x, y, obj_player)) {
+	if (obj_player.invincibleTimer < 0) {
+		obj_player.hp -= dmg;
+		obj_player.invincibleTimer = 100;
 	}	
 }
 
@@ -27,17 +27,17 @@ if (place_meeting(x, y + vsp, oWall)) {
 y = y + vsp;
 
 // fire bullet
-if (firingDelay < 0 && distance_to_object(oPlayer) < oEnemies.fireRange) {
+if (firingDelay < 0 && distance_to_object(obj_player) < oEnemies.fireRange) {
 	firingDelay = 120;
-	with(instance_create_layer(x, y, "bullets", oBulletEnemy)) {
+	with(instance_create_layer(x, y, "bullets", obj_enemybullet)) {
 		speed = 5;
 		rnd = random_range(-3, 3);
-		direction = point_direction(x, y, oPlayer.x, oPlayer.y) + rnd;
+		direction = point_direction(x, y, obj_player.x, obj_player.y) + rnd;
 	}
 }
 
 // look left or right
-if (oPlayer.x < x) {
+if (obj_player.x < x) {
   image_xscale = -1;
 } else {
   image_xscale = 1;

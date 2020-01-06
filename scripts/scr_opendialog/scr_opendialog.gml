@@ -1,6 +1,6 @@
 ///open_dialog("Text", speed, x, y);
 
-txt = instance_create_layer(argument2, argument3-200, "texts", oText);
+txt = instance_create_layer(argument2, argument3-200, "texts", obj_text);
 
 with (txt) {
   padding = 16;

@@ -1,2 +1,3 @@
 scr_showtext("Double jump activated!");
-oPlayer.doubleJump = true;
+obj_player.doubleJump = true;
+obj_player.doubleJumpTimer = 0;
