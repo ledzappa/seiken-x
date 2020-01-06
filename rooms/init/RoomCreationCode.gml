@@ -1,7 +1,5 @@
-globalvar enableDebug;
-enableDebug = false;
-display_set_gui_size(320, 180);
-draw_set_halign(fa_left);
-draw_set_valign(fa_top);
+globalvar enable_debug;
+enable_debug = false;
 
+display_set_gui_size(320, 180);
 room_goto_next();
