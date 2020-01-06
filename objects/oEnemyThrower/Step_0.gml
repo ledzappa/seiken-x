@@ -1,12 +1,10 @@
-/// @description Insert description here
-// You can write your code in this editor
-vsp += oPlayer.grv;
+vsp += obj_player.grv;
 firingDelay--;
 
-if (place_meeting(x, y, oPlayer)) {
-	if (oPlayer.invincibleTimer < 0) {
-		oPlayer.hp -= dmg;
-		oPlayer.invincibleTimer = 100;
+if (place_meeting(x, y, obj_player)) {
+	if (obj_player.invincibleTimer < 0) {
+		obj_player.hp -= dmg;
+		obj_player.invincibleTimer = 100;
 	}	
 }
 
@@ -29,19 +27,18 @@ if (place_meeting(x, y + vsp, oWall)) {
 y = y + vsp;
 
 // throw grenade
-if (firingDelay < 0 && distance_to_object(oPlayer) < 500) {
+if (firingDelay < 0 && distance_to_object(obj_player) < 500) {
   firingDelay = 120;
-  with (instance_create_layer(x, y, "bullets", oGrenadeEnemy)) {
+  with (instance_create_layer(x, y, "bullets", obj_enemygrenade)) {
     rndDir = random_range(-3, 3);
     rndSpd = random_range(-2, 2);
     speed = 5 + rndSpd;
-    direction = point_direction(x, y, oPlayer.x, oPlayer.y) + rndDir;
+    direction = point_direction(x, y, obj_player.x, obj_player.y) + rndDir;
   }
 }
 
 // look left or right
-
-if (oPlayer.x < x) {
+if (obj_player.x < x) {
   image_xscale = -1;
 } else {
   image_xscale = 1;
