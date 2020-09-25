@@ -6,7 +6,7 @@ if (load && global.enable_debug) {
   text += "\nPRESS VK_UP or VK_DOWN to adjust volume on current group.";
   text += "\nLoading default group: " + string(defaultSounds);
   text += "\nLoading soundtrack group: " + string(soundTrack);
-  text += "\nCurrent audiogroup selected: " + string(switchGroup) + " = " + string(showText);
+  text += "\nCurrent audiogroup selected: " + string(activeSoundGroup) + " = " + string(showText);
   
   draw_set_font(fnt);
   draw_set_valign(fa_top);
