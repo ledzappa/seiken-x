@@ -1,5 +1,5 @@
 // Draw the current SFX volume
-if (switchGroup == 0) {
+if (activeSoundGroup == 0) {
   if (soundGroupOnly) {
     draw_text_color(
       obj_player.x,
@@ -15,7 +15,7 @@ if (switchGroup == 0) {
     draw_text_color(
       obj_player.x,
       obj_player.y - 40,
-      string(showText) + " VOL: " + string(sfxVol),
+      string(showText) + " VOL: " + string(volumes[0]),
       c_white,
       c_white,
       c_white,
@@ -24,7 +24,7 @@ if (switchGroup == 0) {
     );
 }
 // Draw the current soundtrack volume
-if (switchGroup == 1) {
+if (activeSoundGroup == 1) {
   if (soundGroupOnly) {
     draw_text_color(
       obj_player.x,
@@ -40,7 +40,7 @@ if (switchGroup == 1) {
     draw_text_color(
       obj_player.x,
       obj_player.y - 40,
-      string(showText) + " VOL: " + string(mainVol),
+      string(showText) + " VOL: " + string(volumes[1]),
       c_white,
       c_white,
       c_white,
