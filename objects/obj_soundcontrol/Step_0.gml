@@ -14,8 +14,8 @@ if(keyboard_check_pressed(vk_add)) {switchGroup++; alpha = 1; soundGroupOnly = t
 if(keyboard_check_pressed(vk_subtract)) {switchGroup--; alpha = 1;soundGroupOnly = true;audio_play_sound(fxSwitch1,1000,false);}
 
 // Switch only between 2 groups
-if(switchGroup > 1) switchGroup = 0;
-if(switchGroup < 0) switchGroup = 1;
+//if(switchGroup > 1) switchGroup = 0;
+//if(switchGroup < 0) switchGroup = 1;
 // Give Audiogroup names
 if(switchGroup == 0) showText = "SFX";
 if(switchGroup == 1) showText = "Soundtrack";
