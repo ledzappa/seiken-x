@@ -1,5 +1,9 @@
 scr_getinput();
 
+if (key_debug) {
+  global.enable_debug = !global.enable_debug;
+}
+
 // show_debug_overlay(true);
 
 // reset game

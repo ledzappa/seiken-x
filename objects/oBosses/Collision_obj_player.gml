@@ -1,0 +1,1 @@
+audio_play_sound(fxEnemyDamage, 100, false);

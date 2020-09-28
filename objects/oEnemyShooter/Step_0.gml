@@ -1,4 +1,4 @@
-vsp += obj_player.grv;
+vsp += grv;
 firingDelay--;
 
 if (place_meeting(x, y, obj_player)) {

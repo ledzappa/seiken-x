@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-vsp += obj_player.grv;
+vsp += grv;
 
 if (place_meeting(x, y, obj_player)) {
 	if (obj_player.invincibleTimer < 0) {

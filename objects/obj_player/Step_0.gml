@@ -1,10 +1,6 @@
 // input
 scr_getinput();
 
-if (key_debug) {
-  global.enable_debug = !global.enable_debug;
-}
-
 // standStill is set to true when shooting upwards
 if (!standStill) {
   var move = key_right - key_left;
@@ -54,19 +50,17 @@ if (!place_meeting(x, y + 10, obj_platforms)) {
   onPlatform = false;
 }
 
-// jump!
-
+// jump
 if (isGrounded) {
   if (vsp == 0 || onPlatform) {
     if (key_jump) {
-		show_debug_message("jump!");
 	    vsp = -7;
 	    extra_jump = 1;
     }
   }
 }
 
-// jump again!
+// double jump
 if (doubleJump && key_jump && extra_jump == 1 && vsp >= 0) {
   vsp = -7;
   extra_jump = 0;

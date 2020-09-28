@@ -1,6 +1,5 @@
 /// @description Insert description here
-shoot_hold = keyboard_check(ord("J"));
-shoot_release = keyboard_check_released(ord("J"));
+scr_getinput();
 
 // To avoid crashing if no sound is chosen
 if(chargeKillSound != noone){

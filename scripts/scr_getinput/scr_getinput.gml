@@ -10,7 +10,4 @@ function scr_getinput() {
 	shoot = keyboard_check_pressed(ord("J"));
 	shoot_hold = keyboard_check(ord("J"));
 	shoot_release = keyboard_check_released(ord("J"));
-
-
-
 }

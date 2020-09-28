@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-vsp = vsp + obj_player.grv;
+vsp = vsp + grv;
 y = y + vsp;
 
 // collision with player

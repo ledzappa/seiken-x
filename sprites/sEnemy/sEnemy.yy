@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sEnemy","path":"sprites/sEnemy/sEnemy.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "sEnemy",
     "tags": [],
     "resourceType": "GMSequence",
   },
