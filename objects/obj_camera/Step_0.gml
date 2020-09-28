@@ -13,8 +13,8 @@ y += (y_to - y - 25) / 10;
 camera_set_view_pos(cam, x-view_w_half , y-view_w_height);
 
 // Clamp camera to room boundaries
-x = clamp(x,view_get_wport(0)/6,room_width-view_get_wport(0)/6);
-y = clamp(y,view_get_hport(0)/6,room_height-view_get_hport(0)/6);
+x = clamp(x, view_get_wport(0)/2, room_width-view_get_wport(0)/2);
+y = clamp(y, view_get_hport(0)/2, room_height-view_get_hport(0)/2);
 
 // Switch Between Fullscreen by toggling between 0 & 1
 if (keyboard_check_pressed(vk_tab)) {

@@ -5,9 +5,9 @@ if (distance_to_object(obj_player) < 120) {
 }
 
 if (place_meeting(x, y, obj_player)) {
-  if (obj_player.invincibleTimer < 0) {
+  if (obj_player.invincible_timer < 0) {
 	obj_player.hp -= dmg;
-	obj_player.invincibleTimer = 100;
+	obj_player.invincible_timer = 100;
   }
   instance_destroy();
 }

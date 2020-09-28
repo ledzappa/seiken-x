@@ -1,24 +1,15 @@
 // input
 scr_getinput();
 
-// standStill is set to true when shooting upwards
-if (!standStill) {
-  var move = key_right - key_left;
-} else {
-  var move = 0;
-}
-
-var isGrounded =
+var move = key_right - key_left;
+var is_grounded =
   place_meeting(x, y + 1, oWalls) || place_meeting(x, y + 2, obj_platforms);
-var isLanded = place_meeting(x, y + sign(vsp), oWalls);
+var is_landed = place_meeting(x, y + sign(vsp), oWalls);
 hsp = move * walksp;
 vsp = clamp(vsp + grv, -7, 8);
-
-timer++;
-if (timer > 500) timer = 0;
-
-invincibleTimer--;
+invincible_timer--;
 dashtimer--;
+
 if (dashtimer != 0) dashtimer = Approach(dashtimer, 0, 0.8);
 
 if (dashtimer < 0 && (!airdash || onPlatform)) {
@@ -32,7 +23,7 @@ if (place_meeting(x + hsp, y, oWalls)) {
   }
   hsp = 0;
 }
-x = x + hsp;
+x += hsp;
 
 // vertical collision
 if (place_meeting(x, y + vsp, oWalls)) {
@@ -42,7 +33,7 @@ if (place_meeting(x, y + vsp, oWalls)) {
   airdash = false;
   vsp = 0;
 }
-y = y + vsp;
+y += vsp;
 
 // reset gravity if not on platform
 if (!place_meeting(x, y + 10, obj_platforms)) {
@@ -51,13 +42,10 @@ if (!place_meeting(x, y + 10, obj_platforms)) {
 }
 
 // jump
-if (isGrounded) {
-  if (vsp == 0 || onPlatform) {
-    if (key_jump) {
-	    vsp = -7;
-	    extra_jump = 1;
-    }
-  }
+if (is_grounded && key_jump) {
+	vsp = -7;
+	extra_jump = 1;
+	airdash = dashing;
 }
 
 // double jump
@@ -74,85 +62,42 @@ if (oItems.dash && key_dash && dashtimer < 0 && (!airdash || onPlatform)) {
 }
 
 //Land sound
-if (isLanded) audio_play_sound(fxLandingSound, 1000, false);
+if (is_landed) audio_play_sound(fxLandingSound, 1000, false);
 
-/*##########################  ANIMATIONS /*##########################*/
-
-// Run Animation
-if (isGrounded) {
-  if (move > 0 || move < 0) {
-    if (sprite_index != sPlayerRun) {
-      sprite_index = sPlayerRun;
-      image_index = 0;
-      image_speed = 1;
-    }
-  }
-}
-
-// Idle
-if (isGrounded) {
+// Animations
+if (is_grounded) {
   if (move == 0) {
-    if (sprite_index != sPlayer) {
-      sprite_index = sPlayer;
-      image_index = 0;
-      image_speed = 1;
-    }
-  }
-}
-
-// Jump Animation
-if (!isGrounded) {
-  if (vsp < 0) {
-    if (dashing) {
-      airdash = true;
-    }
-    if (sprite_index != sPlayerJump) {
-      sprite_index = sPlayerJump;
-      image_index = 0;
-      image_speed = 1;
-    }
-	//Loop last frames of jumping animation
-	if(sprite_index == sPlayerJump)
-	{
-		if(round(image_index) > sprite_get_number(sprite_index))
-		{
-			image_index = 2;
-			image_index = clamp(image_index,2,sprite_get_number(sprite_index));
+		if (sprite_index != sPlayer) {
+			// idle
+			sprite_index = sPlayer;
+			image_index = 0;
+			image_speed = 1;
 		}
-	}
-  }
-}
-
-// Fall Animation
-if (!isGrounded) {
-  if (vsp > 0) {
-    if (sprite_index != sPlayerFall) {
-      sprite_index = sPlayerFall;
-      image_index = 0;
-      image_speed = 1;
-    }
-	//Loop last frames of jumping animation
-	if(sprite_index == sPlayerFall)
-	{
-		if(round(image_index) > sprite_get_number(sprite_index))
-		{
-			image_index = 2;
-			image_index = clamp(image_index,2,sprite_get_number(sprite_index));
+  } else {
+		if (sprite_index != sPlayerRun) {
+			// running
+			sprite_index = sPlayerRun;
+			image_index = 0;
+			image_speed = 1;
 		}
-	}
   }
+} else {
+	var s_index = vsp < 0 ? sPlayerJump : sPlayerFall;
+  if (sprite_index != s_index) {
+		// jumping or falling
+    sprite_index = s_index;
+    image_index = 0;
+    image_speed = 1;
+  } else if (round(image_index) > sprite_get_number(sprite_index)) {
+		image_index = 2;
+		image_index = clamp(image_index, 2, sprite_get_number(sprite_index));
+	}
 }
-
-/* ########################## ANIMATIONS ########################## */
 
 // flip left / right
 if (move != 0) {
   pmove = move;
-  if (move == -1) {
-    image_xscale = -1;
-  } else if (move == 1) {
-    image_xscale = 1;
-  }
+  image_xscale = move;
 }
 
 // if outside camera-y or out-of-hp
@@ -160,10 +105,10 @@ if (y > obj_camera.y + 500 || hp < 0) {
   room_restart();
 }
 
-if (invincibleTimer > 0 && !playerHurt) {
+if (invincible_timer > 0 && !playerHurt) {
   playerHurt = true;
   sprite_index = sprite_index;
-} else if (invincibleTimer < 0 && playerHurt) {
+} else if (invincible_timer < 0 && playerHurt) {
   playerHurt = false;
   //sprite_index = sPlayer;
 }

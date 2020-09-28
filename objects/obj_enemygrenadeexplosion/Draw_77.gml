@@ -10,7 +10,7 @@ inst = instance_place(x, y, obj_player);
 if (inst != noone) {
   if (hit == false) {
     obj_player.hp -= dmg;
-    obj_player.invincibleTimer = 100;
+    obj_player.invincible_timer = 100;
     hit = true;
   }
 }

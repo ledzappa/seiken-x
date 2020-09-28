@@ -14,9 +14,8 @@ pmove = 0;
 timer = 0;
 dashtimer = 0;
 dashing = false;
-standStill = false;
 onPlatform = false;
 airdash = true;
 
 playerHurt = false;
-invincibleTimer = 0;
+invincible_timer = 0;
