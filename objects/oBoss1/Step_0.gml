@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
-vsp += grv;
+if (attack != 2) {
+	vsp += grv;
+}
+
+jump_timer--;
+attack_timer--;
 
 if (place_meeting(x, y, obj_player)) {
 	if (obj_player.invincible_timer < 0) {
@@ -24,11 +29,35 @@ if (place_meeting(x, y + vsp, oWalls)) {
     y = y + sign(vsp);
   }
   airdash = false;
-  vsp = 0;
+  vsp = attack == 2 ? -vsp : 0;
 }
 y = y + vsp;
 
-if (hp < 30 && !phase2) {
-	phase2 = true;
-	hsp = hsp * 2;
+// phase 1 - go from left to right and jump
+if (attack_timer == 0) {
+	attack = attack == 1 ? 2 : 1;
+
+	if (attack == 1) {
+		attack_timer = 300;
+	} 
+
+	if (attack == 2) {
+		vsp = -2;
+		attack_timer = 400;
+	}
+}
+
+
+// phase 2 - fly to middle of screen and shoot around
+
+
+if (hp < 50 && phase != 2) {
+	phase = 2;
+	hsp = hsp * 1.5;
+}
+
+
+if (attack == 1 && jump_timer < 0) {
+	vsp = -8;
+	jump_timer = 100;
 }
