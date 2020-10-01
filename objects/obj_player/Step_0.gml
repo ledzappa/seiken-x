@@ -9,6 +9,19 @@ hsp = move * walksp;
 vsp = clamp(vsp + grv, -7, 8);
 invincible_timer--;
 dashtimer--;
+hurt_timer--;
+
+if (player_hurt) {
+	if (hurt_timer > 15) {
+		hsp = -pmove * 1;
+	} else {
+		hsp = 0;
+	}
+}
+
+if (hurt_timer == 0) {
+	player_hurt = false;
+}
 
 if (dashtimer != 0) dashtimer = Approach(dashtimer, 0, 0.8);
 
@@ -42,7 +55,7 @@ if (!place_meeting(x, y + 10, obj_platforms)) {
 }
 
 // jump
-if (is_grounded && key_jump) {
+if (!player_hurt && is_grounded && key_jump) {
 	vsp = -7;
 	extra_jump = 1;
 	airdash = dashing;
@@ -94,6 +107,14 @@ if (is_grounded) {
 	}
 }
 
+if (player_hurt) {
+	if (sprite_index != sPlayerHurt) {
+		sprite_index = sPlayerHurt;
+    image_index = 0;
+    image_speed = 1;
+	}
+}
+
 // flip left / right
 if (move != 0) {
   pmove = move;
@@ -101,7 +122,7 @@ if (move != 0) {
 }
 
 // if outside camera-y or out-of-hp
-if (y > obj_camera.y + 500 || hp < 0) {
+if (y > obj_camera.y + 500) {
   room_restart();
 }
 

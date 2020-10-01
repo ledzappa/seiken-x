@@ -6,3 +6,4 @@ hsp = 0;
 len = 0;
 chargeup = wBulletCharge;
 increase_value = 1;
+shoot_hold = false;

@@ -151,7 +151,7 @@
     "eventStubScript": null,
     "parent": {"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},
     "resourceVersion": "1.3",
-    "name": "sPlayer",
+    "name": "",
     "tags": [],
     "resourceType": "GMSequence",
   },

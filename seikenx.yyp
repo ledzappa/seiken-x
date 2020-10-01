@@ -8,7 +8,6 @@
     {"id":{"name":"sGunRun","path":"sprites/sGunRun/sGunRun.yy",},"order":5,},
     {"id":{"name":"sGunJump","path":"sprites/sGunJump/sGunJump.yy",},"order":6,},
     {"id":{"name":"sGunFall","path":"sprites/sGunFall/sGunFall.yy",},"order":7,},
-    {"id":{"name":"sPlayerHurt","path":"sprites/sPlayerHurt/sPlayerHurt.yy",},"order":8,},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},"order":9,},
     {"id":{"name":"sBullet","path":"sprites/sBullet/sBullet.yy",},"order":10,},
     {"id":{"name":"sBullet1","path":"sprites/sBullet1/sBullet1.yy",},"order":11,},
@@ -49,6 +48,7 @@
     {"id":{"name":"wBulletChargeFull","path":"sounds/wBulletChargeFull/wBulletChargeFull.yy",},"order":8,},
     {"id":{"name":"wBulletChargeFull1","path":"sounds/wBulletChargeFull1/wBulletChargeFull1.yy",},"order":9,},
     {"id":{"name":"wBulletChargeShot","path":"sounds/wBulletChargeShot/wBulletChargeShot.yy",},"order":10,},
+    {"id":{"name":"sPlayerHurt","path":"sprites/sPlayerHurt/sPlayerHurt.yy",},"order":31,},
     {"id":{"name":"wBulletChargeShot1","path":"sounds/wBulletChargeShot1/wBulletChargeShot1.yy",},"order":11,},
     {"id":{"name":"fxSwitch1","path":"sounds/fxSwitch1/fxSwitch1.yy",},"order":12,},
     {"id":{"name":"fxSwitch2","path":"sounds/fxSwitch2/fxSwitch2.yy",},"order":13,},
@@ -94,8 +94,6 @@
     {"id":{"name":"init","path":"rooms/init/init.yy",},"order":0,},
     {"id":{"name":"oBosses","path":"objects/oBosses/oBosses.yy",},"order":1,},
     {"id":{"name":"STAGE0","path":"rooms/STAGE0/STAGE0.yy",},"order":0,},
-    {"id":{"name":"STAGE1","path":"rooms/STAGE1/STAGE1.yy",},"order":0,},
-    {"id":{"name":"TESTDEBUG","path":"rooms/TESTDEBUG/TESTDEBUG.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Windows","path":"options/windows/options_windows.yy",},
@@ -111,8 +109,6 @@
   "RoomOrder": [
     {"name":"init","path":"rooms/init/init.yy",},
     {"name":"STAGE0","path":"rooms/STAGE0/STAGE0.yy",},
-    {"name":"STAGE1","path":"rooms/STAGE1/STAGE1.yy",},
-    {"name":"TESTDEBUG","path":"rooms/TESTDEBUG/TESTDEBUG.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -133,8 +129,6 @@
     {"folderPath":"folders/Objects/weapons.yy","order":7,"resourceVersion":"1.0","name":"weapons","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Rooms.yy","order":11,"resourceVersion":"1.0","name":"Rooms","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Rooms/STAGE 0.yy","order":1,"resourceVersion":"1.0","name":"STAGE 0","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Rooms/STAGE 1.yy","order":2,"resourceVersion":"1.0","name":"STAGE 1","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Rooms/TEST.yy","order":3,"resourceVersion":"1.0","name":"TEST","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Notes.yy","order":12,"resourceVersion":"1.0","name":"Notes","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Extensions.yy","order":13,"resourceVersion":"1.0","name":"Extensions","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sequences.yy","order":1,"resourceVersion":"1.0","name":"Sequences","tags":[],"resourceType":"GMFolder",},
