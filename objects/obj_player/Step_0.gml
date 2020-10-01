@@ -54,6 +54,23 @@ if (!place_meeting(x, y + 10, obj_platforms)) {
   onPlatform = false;
 }
 
+inst = instance_place(x, y, oEnemies);
+if (inst != noone && invincible_timer < 0) {    
+	hp -= inst.dmg;
+}
+
+if (place_meeting(x, y, oEnemies) || 
+		place_meeting(x, y, obj_enemygrenadeexplosion) || 
+		place_meeting(x, y, obj_enemybullet)) {
+	if (invincible_timer < 0) {
+		hurt_timer = 25;
+		invincible_timer = 100;
+		player_hurt = true;
+		audio_play_sound(fxEnemyDamage, 100, false);
+	}
+}
+
+
 // jump
 if (!player_hurt && is_grounded && key_jump) {
 	vsp = -7;

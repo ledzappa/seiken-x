@@ -1,12 +1,6 @@
 vsp += grv;
 firingDelay--;
 
-if (place_meeting(x, y, obj_player)) {
-	if (obj_player.invincible_timer < 0) {
-		obj_player.hp -= dmg;
-	}	
-}
-
 // horizontal collision
 if (place_meeting(x + hsp, y, oWall)) {
   while (!place_meeting(x + sign(hsp), y, oWall)) {

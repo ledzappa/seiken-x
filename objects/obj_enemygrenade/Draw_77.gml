@@ -6,9 +6,5 @@ y = y + vsp;
 // collision with player
 inst = instance_place(x, y, obj_player);
 if (inst != noone) {
-  obj_player.hp -= 10;
-  if (inst.hp == 0) {
-    room_restart();
-  }
   instance_destroy();
 }

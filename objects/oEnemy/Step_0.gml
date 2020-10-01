@@ -2,12 +2,6 @@
 // You can write your code in this editor
 vsp += grv;
 
-if (place_meeting(x, y, obj_player)) {
-	if (obj_player.invincible_timer < 0) {
-		obj_player.hp -= dmg;
-	}	
-}
-
 // horizontal collision
 if (place_meeting(x + hsp, y, oWalls)) {
   while (!place_meeting(x + sign(hsp), y, oWalls)) {

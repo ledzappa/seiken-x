@@ -7,12 +7,15 @@ if (attack != 2) {
 jump_timer--;
 attack_timer--;
 
+/*
 if (place_meeting(x, y, obj_player)) {
+	show_debug_message(obj_player.invincible_timer);
 	if (obj_player.invincible_timer < 0) {
+		show_debug_message("Boss hit player");
 		obj_player.hp -= dmg;
-		obj_player.invincible_timer = 100;
 	}	
 }
+*/
 
 // horizontal collision
 if (place_meeting(x + hsp, y, oWalls)) {
