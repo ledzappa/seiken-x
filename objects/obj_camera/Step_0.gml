@@ -18,13 +18,6 @@ y = clamp(y, view_get_hport(0)/2, room_height-view_get_hport(0)/2);
 
 // Switch Between Fullscreen by toggling between 0 & 1
 if (keyboard_check_pressed(vk_tab)) {
-	toggle_switch = toggle_switch ^ 1;
-	if (toggle_switch == 0) {
-		audio_play_sound(fxSwitch3,1000,false);
-	} else audio_play_sound(fxSwitch1,1000,false);
-}
-
-switch (toggle_switch) {
-	case 0: window_set_fullscreen(false); break;
-	case 1: window_set_fullscreen(true); break;
+	fullscreen = !fullscreen;
+	window_set_fullscreen(fullscreen)
 }

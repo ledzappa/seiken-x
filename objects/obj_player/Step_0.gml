@@ -1,7 +1,11 @@
 // input
 scr_getinput();
+var move = 0;
 
-var move = key_right - key_left;
+if (!freeze_inputs) {
+	move = key_right - key_left;
+}
+
 var is_grounded =
   place_meeting(x, y + 1, oWalls) || place_meeting(x, y + 2, obj_platforms);
 var is_landed = place_meeting(x, y + sign(vsp), oWalls);

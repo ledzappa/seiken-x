@@ -1,8 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-hp = 3;
-dmg = 5;
-vsp = 0;
-hsp = 0;
-
-firingDelay = 0;
+timer = 200;
+start_timer = false;

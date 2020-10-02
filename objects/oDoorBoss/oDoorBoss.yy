@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sWallBreakable",
-    "path": "sprites/sWallBreakable/sWallBreakable.yy",
+    "name": "sDoorBoss",
+    "path": "sprites/sDoorBoss/sDoorBoss.yy",
   },
   "solid": false,
   "visible": true,
@@ -14,7 +14,7 @@
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
-  "physicsGroup": 0,
+  "physicsGroup": 1,
   "physicsDensity": 0.5,
   "physicsRestitution": 0.1,
   "physicsLinearDamping": 0.1,
@@ -25,12 +25,12 @@
   "physicsShapePoints": [
     {"x":0.0,"y":0.0,},
     {"x":16.0,"y":0.0,},
-    {"x":16.0,"y":80.0,},
-    {"x":0.0,"y":80.0,},
+    {"x":16.0,"y":64.0,},
+    {"x":0.0,"y":64.0,},
   ],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oWallBreakable","path":"objects/oWallBreakable/oWallBreakable.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oWallBreakable","path":"objects/oWallBreakable/oWallBreakable.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oDoorBoss","path":"objects/oDoorBoss/oDoorBoss.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oDoorBoss","path":"objects/oDoorBoss/oDoorBoss.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -39,7 +39,7 @@
     "path": "folders/Objects/walls.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oWallBreakable",
+  "name": "oDoorBoss",
   "tags": [],
   "resourceType": "GMObject",
 }

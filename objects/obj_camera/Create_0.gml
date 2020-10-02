@@ -4,4 +4,4 @@ view_w_height = camera_get_view_height(cam) * 0.5;
 x_to = xstart;
 y_to = ystart;
 // Toggles Between 0 & 1
-toggle_switch = 0;
+fullscreen = true;

@@ -1,5 +1,5 @@
 function scr_getinput() {
-	if (!obj_player.player_hurt) {
+	if (!obj_player.player_hurt && !freeze_inputs) {
 		key_left = keyboard_check(ord("A"));
 		key_right = keyboard_check(ord("D"));
 		key_top = keyboard_check(ord("W"));
