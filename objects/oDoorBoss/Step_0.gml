@@ -8,5 +8,5 @@ if (image_index == 12) {
 
 if (image_speed != 0 && sound_timer < 0) {
 	sound_timer = 15;
-	audio_play_sound(fxDoorBoss,100, false);
+	audio_play_sound(fxDoorBoss, 100, false);
 }
