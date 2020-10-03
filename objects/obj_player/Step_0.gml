@@ -1,3 +1,4 @@
+if (global.paused) exit;
 // input
 scr_getinput();
 var move = 0;

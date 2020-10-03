@@ -1,3 +1,4 @@
+if (global.paused) exit;
 vsp += grv;
 firingDelay--;
 
@@ -23,7 +24,7 @@ y = y + vsp;
 if (firingDelay < 0 && distance_to_object(obj_player) < oEnemies.fireRange) {
 	firingDelay = 120;
 	with(instance_create_layer(x, y, "bullets", obj_enemybullet)) {
-		speed = 5;
+		speed = 4;
 		rnd = random_range(-3, 3);
 		direction = point_direction(x, y, obj_player.x, obj_player.y) + rnd;
 	}

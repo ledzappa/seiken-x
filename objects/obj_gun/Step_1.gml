@@ -1,3 +1,4 @@
+if (global.paused) exit;
 scr_getinput();
 x = obj_player.x + sign(obj_player.image_xscale) * 4;
 y = obj_player.y;

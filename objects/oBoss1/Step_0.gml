@@ -6,6 +6,9 @@ if (attack != 2) {
 
 jump_timer--;
 attack_timer--;
+if (attack == 2) {
+	shoot_timer--;
+}
 
 /*
 if (place_meeting(x, y, obj_player)) {
@@ -50,11 +53,33 @@ if (attack_timer == 0) {
 	}
 }
 
+if (attack == 2 && shoot_timer < 0) {
+	shoot_timer = 30;
+	shoot_direction_toggle = !shoot_direction_toggle;
+	with (instance_create_layer(x, y, "bullets", obj_enemybullet)) {
+		speed = 2;
+		direction = oBoss1.shoot_direction_toggle ? 45 : 0;
+	}
+	with (instance_create_layer(x, y, "bullets", obj_enemybullet)) {
+		speed = 2;
+		direction = oBoss1.shoot_direction_toggle ? 135 : 90;
+	}
+	with (instance_create_layer(x, y, "bullets", obj_enemybullet)) {
+		speed = 2;
+		direction = oBoss1.shoot_direction_toggle ? 225 : 180;
+	}
+	with (instance_create_layer(x, y, "bullets", obj_enemybullet)) {
+		speed = 2;
+		direction = oBoss1.shoot_direction_toggle ? 315 : 270;
+	}
+}
+
 
 // phase 2 - fly to middle of screen and shoot around
 
 
-if (hp < 50 && phase != 2) {
+if (hp < 30 && phase != 2) {
+  sprite_index = sBoss1phase2;
 	phase = 2;
 	hsp = hsp * 1.5;
 }

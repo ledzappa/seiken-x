@@ -7,7 +7,7 @@ if (instance_exists(camera_follow_object)) {
 // Update object position
 //x += (xTo - x + 100 * follow.pmove) / 10;
 x += (x_to - x + 20 * camera_follow_object.pmove) / 10;
-y += (y_to - y - 25) / 10;
+y += (y_to - y - 30) / 15;
 
 // Update camera view
 camera_set_view_pos(cam, x-view_w_half , y-view_w_height);

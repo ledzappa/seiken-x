@@ -1,3 +1,6 @@
+scr_getinput();
 /// @description Insert description here
 // You can write your code in this editor
-dmg = 5;
+if (key_pause) {
+	paused = !paused;
+}

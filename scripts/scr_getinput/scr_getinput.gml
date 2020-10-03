@@ -8,6 +8,7 @@ function scr_getinput() {
 		key_debug = keyboard_check_pressed(ord("Q"));
 		key_enter = keyboard_check_pressed(vk_enter);
 		key_esc = keyboard_check_pressed(vk_escape);
+		key_pause = keyboard_check_pressed(ord("P"));		
 		shoot = keyboard_check_pressed(ord("J"));
 		shoot_hold = keyboard_check(ord("J"));
 		shoot_release = keyboard_check_released(ord("J"));

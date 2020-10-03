@@ -1,4 +1,4 @@
-hp = 70;
+hp = 100;
 dmg = 10;
 vsp = 0;
 hsp = 5;
@@ -8,5 +8,6 @@ attack = 1;
 attack_timer = 100;
 phase = 1;
 
-
 jump_timer = 100;
+shoot_timer = 100;
+shoot_direction_toggle = false;

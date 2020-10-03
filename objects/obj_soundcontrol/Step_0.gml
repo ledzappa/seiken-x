@@ -28,6 +28,9 @@ volumes[activeSoundGroup] = clamp(volumes[activeSoundGroup],0,1);
 // Set Soundtrack audiogroup volume
 audio_group_set_gain(activeSoundGroup, volumes[activeSoundGroup], 0);
 
+// Lower soundtrack if paused
+audio_group_set_gain(1, global.paused ? 0.2 : volumes[1], 0);
+
 // Always approach Alpha to value 0
 alpha = Approach(alpha,0,0.05);
 if (alpha == 0) {
