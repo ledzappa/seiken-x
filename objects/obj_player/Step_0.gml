@@ -8,7 +8,7 @@ if (!freeze_inputs) {
 }
 
 var is_grounded =
-  place_meeting(x, y + 1, oWalls) || place_meeting(x, y + 2, obj_platforms);
+  place_meeting(x - (10*move), y + 1, oWalls) || place_meeting(x, y + 2, obj_platforms);
 var is_landed = place_meeting(x, y + sign(vsp), oWalls);
 hsp = move * walksp;
 vsp = clamp(vsp + grv, -7, 8);
@@ -90,11 +90,13 @@ if (doubleJump && key_jump && extra_jump == 1 && vsp >= 0) {
 }
 
 // dash
+/*
 if (oItems.dash && key_dash && dashtimer < 0 && (!airdash || onPlatform)) {
   dashing = true;
   dashtimer = 8;
   walksp += 2.5;
 }
+*/
 
 //Land sound
 if (is_landed) audio_play_sound(fxLandingSound, 1000, false);
