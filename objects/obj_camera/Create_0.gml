@@ -5,3 +5,5 @@ x_to = xstart;
 y_to = ystart;
 // Toggles Between 0 & 1
 fullscreen = true;
+x_min = 0;
+x_max = 5000;
