@@ -35,10 +35,11 @@ if (dashtimer < 0 && (!airdash || onPlatform)) {
 }
 
 // ladder
-if (place_meeting(x, y, oLadder)) {
+ladder = instance_place(x, y, oLadder);
+if (ladder != noone) {    
 	if (key_up || key_down) {
 		climbing = true;
-		x  = obj_player.x < oLadder.x ? x + 1 : x - 1;
+		x  = obj_player.x < ladder.x ? x + 1 : x - 1;
 		vsp = key_up ? -2 : 2;
 		hsp = 0;
 	}

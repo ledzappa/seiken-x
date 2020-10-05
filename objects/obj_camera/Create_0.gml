@@ -7,3 +7,4 @@ y_to = ystart;
 fullscreen = true;
 x_min = 0;
 x_max = 5000;
+y_max = 680;
