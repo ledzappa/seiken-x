@@ -5,11 +5,11 @@ y = obj_player.y;
 image_xscale = obj_player.image_xscale;
 firing_delay--;
 
-if (key_top && key_right) {
+if (key_up && key_right) {
   angle = 45;
-} else if (key_top && key_left) {
+} else if (key_up && key_left) {
   angle = 135;
-} else if (key_top) {
+} else if (key_up) {
   angle = 90;
 } else if (obj_player.pmove == -1) {
   angle = 180;

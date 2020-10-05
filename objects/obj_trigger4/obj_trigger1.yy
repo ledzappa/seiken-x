@@ -1,11 +1,14 @@
 {
   "spriteId": {
-    "name": "sTrigger",
-    "path": "sprites/sTrigger/sTrigger.yy",
+    "name": "Sprite32",
+    "path": "sprites/Sprite32/Sprite32.yy",
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "Sprite31",
+    "path": "sprites/Sprite31/Sprite31.yy",
+  },
   "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,

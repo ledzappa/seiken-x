@@ -5,8 +5,11 @@ if (instance_exists(camera_follow_object)) {
 }
 
 // Update object position
-//x += (xTo - x + 100 * follow.pmove) / 10;
-x += (x_to - x + 20 * camera_follow_object.pmove) / 5;
+if (
+((x > x_min || (obj_player.x - x_min) > 0) && (x < x_max || obj_player.x - x_max < 0) )) {
+	x += (x_to - x) / 3;
+}
+
 y += (y_to - y - 30) / 15;
 
 // Update camera view

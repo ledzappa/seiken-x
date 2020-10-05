@@ -5,6 +5,7 @@ extra_jump = 0;
 player_hurt = false;
 doubleJump = false;
 doubleJumpTime = 1200; // 20s
+climbing = false;
 
 // timers
 doubleJumpTimer = 0;

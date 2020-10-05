@@ -34,6 +34,25 @@ if (dashtimer < 0 && (!airdash || onPlatform)) {
   walksp = 2.5;
 }
 
+// ladder
+if (place_meeting(x, y, oLadder)) {
+	if (key_up || key_down) {
+		climbing = true;
+		x  = obj_player.x < oLadder.x ? x + 1 : x - 1;
+		vsp = key_up ? -2 : 2;
+		hsp = 0;
+	}
+	
+	if (climbing && !key_up && !key_down && !is_grounded) {
+		hsp = 0;
+		vsp = 0;
+	}
+}
+
+if (is_grounded || key_jump) {
+	climbing = false;
+}
+
 // horizontal collision
 if (place_meeting(x + hsp, y, oWalls)) {
   while (!place_meeting(x + sign(hsp), y, oWalls)) {
