@@ -26,7 +26,7 @@ if (place_meeting(x, y + vsp, oWall)) {
 y = y + vsp;
 
 // throw grenade
-if (firingDelay < 0 && distance_to_object(obj_player) < 500) {
+if (firingDelay < 0 && scr_objectinview(x,y)) {
   firingDelay = 120;
   with (instance_create_layer(x, y, "bullets", obj_enemygrenade)) {
     rndDir = random_range(-3, 3);

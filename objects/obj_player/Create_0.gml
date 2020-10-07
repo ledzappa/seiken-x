@@ -23,4 +23,6 @@ onPlatform = false;
 airdash = true;
 
 playerHurt = false;
+player_dead = false;
 invincible_timer = 0;
+restart_timer = 250;

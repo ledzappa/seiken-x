@@ -37,7 +37,7 @@ if (dashtimer < 0 && (!airdash || onPlatform)) {
 // ladder
 ladder = instance_place(x, y, oLadder);
 if (ladder != noone) {    
-	if (key_up || key_down) {
+	if (key_up || (key_down && !is_grounded)) {
 		climbing = true;
 		x  = obj_player.x < ladder.x ? x + 1 : x - 1;
 		vsp = key_up ? -2 : 2;
@@ -90,8 +90,13 @@ if (place_meeting(x, y, oEnemies) ||
 	if (invincible_timer < 0) {
 		hurt_timer = 25;
 		invincible_timer = 100;
-		player_hurt = true;
-		audio_play_sound(fxEnemyDamage, 100, false);
+		if (hp > 0) {
+			player_hurt = true;
+			audio_play_sound(fxEnemyDamage, 100, false);
+		} else {
+			player_dead = true;
+			freeze_inputs = true;
+		}
 	}
 }
 
@@ -119,43 +124,68 @@ if (oItems.dash && key_dash && dashtimer < 0 && (!airdash || onPlatform)) {
 */
 
 //Land sound
-if (is_landed) audio_play_sound(fxLandingSound, 1000, false);
+//if (is_landed) audio_play_sound(fxLandingSound, 1000, false);
 
 // Animations
-if (is_grounded) {
-  if (move == 0) {
-		if (sprite_index != sPlayer) {
-			// idle
-			sprite_index = sPlayer;
-			image_index = 0;
-			image_speed = 1;
+if (!player_dead) {
+	if (is_grounded) {
+	  if (move == 0) {
+			if (sprite_index != sPlayer) {
+				// idle
+				sprite_index = sPlayer;
+				image_index = 0;
+				image_speed = 1;
+			}
+	  } else {
+			if (sprite_index != sPlayerRun) {
+				// running
+				sprite_index = sPlayerRun;
+				image_index = 0;
+				image_speed = 1;
+			}
+	  }
+	} else if (!climbing){
+		var s_index = vsp < 0 ? sPlayerJump : sPlayerFall;
+	  if (sprite_index != s_index) {
+			// jumping or falling
+	    sprite_index = s_index;
+	    image_index = 0;
+	    image_speed = 1;
+	  } else if (round(image_index) > sprite_get_number(sprite_index)) {
+			image_index = 2;
+			image_index = clamp(image_index, 2, sprite_get_number(sprite_index));
 		}
-  } else {
-		if (sprite_index != sPlayerRun) {
-			// running
-			sprite_index = sPlayerRun;
-			image_index = 0;
-			image_speed = 1;
-		}
-  }
-} else {
-	var s_index = vsp < 0 ? sPlayerJump : sPlayerFall;
-  if (sprite_index != s_index) {
-		// jumping or falling
-    sprite_index = s_index;
-    image_index = 0;
-    image_speed = 1;
-  } else if (round(image_index) > sprite_get_number(sprite_index)) {
-		image_index = 2;
-		image_index = clamp(image_index, 2, sprite_get_number(sprite_index));
 	}
-}
 
-if (player_hurt) {
-	if (sprite_index != sPlayerHurt) {
-		sprite_index = sPlayerHurt;
-    image_index = 0;
-    image_speed = 1;
+	if (player_hurt) {
+		if (sprite_index != sPlayerHurt) {
+			sprite_index = sPlayerHurt;
+	    image_index = 0;
+	    image_speed = 1;
+		}
+	}
+
+	if (climbing) {
+		if (sprite_index != sPlayerClimb) {
+			sprite_index = sPlayerClimb;
+		}
+	}
+} else {
+	restart_timer--;
+	if (sprite_index != sPlayerDeath) {
+		audio_play_sound(wBulletChargeShot1, 100, true);
+		sprite_index = sPlayerDeath;
+		image_index = 0;
+		image_speed = 1;
+	}
+	
+	if (image_index == 20) {
+		audio_stop_sound(wBulletChargeShot1);
+		audio_play_sound(fxPlayerDeath, 100, false);
+	}
+	
+	if (image_index > 24) {
+		image_speed = 0;
 	}
 }
 
@@ -172,7 +202,7 @@ if (y > obj_camera.y + 500) {
 
 if (invincible_timer > 0 && !playerHurt) {
   playerHurt = true;
-  sprite_index = sprite_index;
+  //sprite_index = sprite_index;
 } else if (invincible_timer < 0 && playerHurt) {
   playerHurt = false;
   //sprite_index = sPlayer;
@@ -187,3 +217,7 @@ if (doubleJump && doubleJumpTimer < doubleJumpTime) {
 }
 
 hp = clamp(hp, 0, 100);
+
+if (restart_timer < 0) {
+	game_restart();
+}
