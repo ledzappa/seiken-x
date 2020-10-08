@@ -84,6 +84,22 @@ if (hp < 30 && phase != 2) {
 	hsp = hsp * 1.5;
 }
 
+if (attack == 1) {
+	if (sprite_index != sBoss1) {
+		sprite_index = sBoss1;
+		image_index = 0;
+		image_speed = 1;
+	}
+}
+
+if (attack == 2) {
+	if (sprite_index != sBoss1air) {
+		sprite_index = sBoss1air;
+		image_index = 0;
+		image_speed = 1;
+	}
+}
+
 
 if (attack == 1 && jump_timer < 0) {
 	vsp = -8;

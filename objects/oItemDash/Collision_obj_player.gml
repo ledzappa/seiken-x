@@ -1,2 +1,2 @@
-scr_showtext("Dash activated!");
+scr_showtext("Dash activated!", 10);
 oItems.dash = true;

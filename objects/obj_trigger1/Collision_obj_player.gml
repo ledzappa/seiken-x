@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-show_debug_message("trigger1");
+scr_showtext("ZONE A", 200);
 //obj_camera.x_min = 720;
 //obj_camera.x_max = 1730;
 obj_camera.x_min = 160;

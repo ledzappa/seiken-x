@@ -15,7 +15,7 @@ if (timer == turnTime) {
 // when it turns
 if (place_meeting(x, y, obj_player)) {
   with (obj_player) {
-    onPlatform = true;
+    on_platform = true;
     dst = abs(other.y - y);
 
     // so the player doesn't land "inside" the platform

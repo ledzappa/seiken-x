@@ -1,11 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 hp = 100;
+hp_max = 100;
 extra_jump = 0;
-player_hurt = false;
-doubleJump = false;
 doubleJumpTime = 1200; // 20s
-climbing = false;
 
 // timers
 doubleJumpTimer = 0;
@@ -18,11 +16,17 @@ vsp = 0;
 walksp = 2.5;
 
 pmove = 0;
-dashing = false;
-onPlatform = false;
-airdash = true;
 
-playerHurt = false;
+//states
+player_hurt = false;
 player_dead = false;
+on_platform = false;
+doubleJump = false;
+dashing = false;
+airdash = true;
+climbing = false;
+climbing_idle = false;
+
+//timers
 invincible_timer = 0;
 restart_timer = 250;

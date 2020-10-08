@@ -30,18 +30,21 @@ if (hurt_timer == 0) {
 
 if (dashtimer != 0) dashtimer = Approach(dashtimer, 0, 0.8);
 
-if (dashtimer < 0 && (!airdash || onPlatform)) {
+if (dashtimer < 0 && (!airdash || on_platform)) {
   walksp = 2.5;
 }
 
 // ladder
 ladder = instance_place(x, y, oLadder);
-if (ladder != noone) {    
+if (ladder != noone) {
 	if (key_up || (key_down && !is_grounded)) {
+		climbing_idle = false;
 		climbing = true;
 		x  = obj_player.x < ladder.x ? x + 1 : x - 1;
 		vsp = key_up ? -2 : 2;
 		hsp = 0;
+	} else {
+	  climbing_idle = true;
 	}
 	
 	if (climbing && !key_up && !key_down && !is_grounded) {
@@ -76,7 +79,7 @@ y += vsp;
 // reset gravity if not on platform
 if (!place_meeting(x, y + 10, obj_platforms)) {
   grv = 0.4;
-  onPlatform = false;
+  on_platform = false;
 }
 
 inst = instance_place(x, y, oEnemies);
@@ -96,6 +99,9 @@ if (place_meeting(x, y, oEnemies) ||
 		} else {
 			player_dead = true;
 			freeze_inputs = true;
+			with (obj_gun) {
+				instance_destroy();
+			}
 		}
 	}
 }
@@ -116,7 +122,7 @@ if (doubleJump && key_jump && extra_jump == 1 && vsp >= 0) {
 
 // dash
 /*
-if (oItems.dash && key_dash && dashtimer < 0 && (!airdash || onPlatform)) {
+if (oItems.dash && key_dash && dashtimer < 0 && (!airdash || on_platform)) {
   dashing = true;
   dashtimer = 8;
   walksp += 2.5;
@@ -144,7 +150,7 @@ if (!player_dead) {
 				image_speed = 1;
 			}
 	  }
-	} else if (!climbing){
+	} else if (!climbing) {
 		var s_index = vsp < 0 ? sPlayerJump : sPlayerFall;
 	  if (sprite_index != s_index) {
 			// jumping or falling
@@ -168,7 +174,9 @@ if (!player_dead) {
 	if (climbing) {
 		if (sprite_index != sPlayerClimb) {
 			sprite_index = sPlayerClimb;
+			image_index = 0;
 		}
+		image_speed = climbing_idle ? 0 : 1;
 	}
 } else {
 	restart_timer--;
@@ -199,15 +207,6 @@ if (move != 0) {
 if (y > obj_camera.y + 500) {
   room_restart();
 }
-
-if (invincible_timer > 0 && !playerHurt) {
-  playerHurt = true;
-  //sprite_index = sprite_index;
-} else if (invincible_timer < 0 && playerHurt) {
-  playerHurt = false;
-  //sprite_index = sPlayer;
-}
-
 
 if (doubleJump && doubleJumpTimer < doubleJumpTime) {
   doubleJumpTimer++;

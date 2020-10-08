@@ -4,3 +4,4 @@
 
 x = obj_camera.x;
 y = obj_camera.y - 75;
+timer--;
