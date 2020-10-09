@@ -18,7 +18,8 @@ if (place_meeting(x, y, oWall)) {
 
 // collision with enemies
 enemy = instance_place(x, y, oEnemies);
-if (enemy != noone) {
+if (enemy != noone && scr_objectinview(enemy.x, enemy.y)) {
+	audio_play_sound(fxEnemyDamage, 100, false);
   enemy.hp -= dmg;
 	enemy.flash = 3;
   if (enemy.hp == 0) {
