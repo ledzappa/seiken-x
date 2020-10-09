@@ -7,7 +7,7 @@ globalvar paused;
 window_set_fullscreen(true);
 enable_debug = false;
 camera_follow_object = obj_player;
-grv = 0.4;
+grv = 0.22;
 freeze_inputs = false;
 paused = false;
 
