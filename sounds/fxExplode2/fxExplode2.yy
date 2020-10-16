@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "fxExplode",
-  "duration": 2.76393414,
+  "soundFile": "fxExplode2.ogg",
+  "duration": 2.165,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "fxExplode",
+  "name": "fxExplode2",
   "tags": [],
   "resourceType": "GMSound",
 }

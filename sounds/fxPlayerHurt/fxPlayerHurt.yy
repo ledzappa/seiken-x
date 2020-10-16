@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "fxPlayerDeath.ogg",
-  "duration": 4.445,
+  "soundFile": "fxPlayerHurt.ogg",
+  "duration": 0.965,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "fxPlayerDeath",
+  "name": "fxPlayerHurt",
   "tags": [],
   "resourceType": "GMSound",
 }

@@ -30,3 +30,8 @@ climbing_idle = false;
 //timers
 invincible_timer = 0;
 restart_timer = 250;
+
+if (global.checkpointR == room) {
+	x = global.checkpointX;
+	y = global.checkpointY;
+}

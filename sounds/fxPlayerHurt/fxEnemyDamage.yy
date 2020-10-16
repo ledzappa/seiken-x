@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "fxPlayerDeath.ogg",
-  "duration": 4.445,
+  "soundFile": "fxEnemyDamage.wav",
+  "duration": 0.457562,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "fxPlayerDeath",
+  "name": "fxEnemyDamage",
   "tags": [],
   "resourceType": "GMSound",
 }

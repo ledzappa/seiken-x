@@ -100,7 +100,7 @@ if (place_meeting(x, y, oEnemies) ||
 			player_dead = true;
 			freeze_inputs = true;
 			with (obj_gun) {
-				instance_destroy();
+				// instance_destroy();
 			}
 		}
 	}
@@ -113,6 +113,12 @@ if (!player_hurt && is_grounded && key_jump) {
 	extra_jump = 1;
 	airdash = dashing;
 }
+
+/*KOLLA UPP*/
+//if(key_jump_released)
+//{
+//	vsp = max(vsp,-7/3.2);
+//}
 
 // double jump
 if (doubleJump && key_jump && extra_jump == 1 && vsp >= 0) {
@@ -218,5 +224,5 @@ if (doubleJump && doubleJumpTimer < doubleJumpTime) {
 hp = clamp(hp, 0, 100);
 
 if (restart_timer < 0) {
-	game_restart();
+	scr_death();
 }

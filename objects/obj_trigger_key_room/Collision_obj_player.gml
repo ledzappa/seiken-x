@@ -1,3 +1,2 @@
-obj_camera.x_min = 3200+160;
-obj_camera.x_max = 5000;
+camera_follow_object = obj_cam_2;
 instance_destroy();

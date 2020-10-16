@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "fxPlayerDeath.ogg",
-  "duration": 4.445,
+  "soundFile": "fxExplode0",
+  "duration": 2.76393414,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "fxPlayerDeath",
+  "name": "fxExplode0",
   "tags": [],
   "resourceType": "GMSound",
 }

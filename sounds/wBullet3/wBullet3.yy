@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "fxPlayerDeath.ogg",
-  "duration": 4.445,
+  "soundFile": "wBullet3.ogg",
+  "duration": 0.725,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "fxPlayerDeath",
+  "name": "wBullet3",
   "tags": [],
   "resourceType": "GMSound",
 }

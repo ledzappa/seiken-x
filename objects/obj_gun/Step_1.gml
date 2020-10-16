@@ -44,3 +44,4 @@ if (pre_charge_timer > 50 && !instance_exists(obj_bulletcharge)) {
   instance_create_layer(x, y, "bullets", obj_bulletcharge);
   pre_charge_timer = 0;
 }
+
