@@ -8,3 +8,4 @@ fullscreen = true;
 x_min = 0;
 x_max = 5000;
 y_max = 680;
+y_min = 0;

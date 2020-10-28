@@ -7,8 +7,10 @@ if (!freeze_inputs) {
 	move = key_right - key_left;
 }
 
+inst_wall = instance_place(x - (10*move), y + 1, oWalls);
 var is_grounded =
-  place_meeting(x - (10*move), y + 1, oWalls) || place_meeting(x, y + 2, obj_platforms);
+  (inst_wall != noone && inst_wall.is_solid) || 
+	place_meeting(x, y + 2, obj_platforms);
 var is_landed = place_meeting(x, y + sign(vsp), oWalls);
 hsp = move * walksp;
 vsp = clamp(vsp + grv, -7, 8);
@@ -58,21 +60,26 @@ if (is_grounded || key_jump) {
 }
 
 // horizontal collision
-if (place_meeting(x + hsp, y, oWalls)) {
-  while (!place_meeting(x + sign(hsp), y, oWalls)) {
-    x = x + sign(hsp);
-  }
-  hsp = 0;
+inst_wd_x = instance_place(x + hsp, y, oWallDynamic);
+if (place_meeting(x + hsp, y, oWalls) && (inst_wd_x == noone || inst_wd_x.is_solid)) {
+	hsp = 0;
 }
 x += hsp;
 
 // vertical collision
-if (place_meeting(x, y + vsp, oWalls)) {
-  while (!place_meeting(x, y + sign(vsp), oWalls)) {
-    y = y + sign(vsp);
-  }
-  airdash = false;
-  vsp = 0;
+inst_wd_y = instance_place(x, y + vsp, oWallDynamic);
+if (place_meeting(x, y + vsp, oWalls) && (inst_wd_y == noone || inst_wd_y.is_solid)) {
+	if (inst_wd_y) {
+		var d = inst_wd_y.y - y;
+		if (d > 8 && d < 15) {
+			show_debug_message(d);
+			y = y - d;
+		} else if (d < 8 && d > -27) {
+			y+=5;
+		}
+	}
+	vsp = 0;
+	airdash = false;
 }
 y += vsp;
 
