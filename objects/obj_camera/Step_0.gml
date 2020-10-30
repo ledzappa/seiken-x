@@ -22,10 +22,18 @@ if (instance_exists(camera_follow_object)) {
   y_to = camera_follow_object.y;
 }
 
-var xmin = x_min + 160;
-var xmax = x_max - 160;
-var ymin = y_min + 90;
-var ymax = y_max - 90;
+if (global.camera_follow_object == obj_player) {
+	var xmin = x_min + 160;
+	var xmax = x_max - 160;
+	var ymin = y_min + 90;
+	var ymax = y_max - 90;
+} else {
+	var xmin = 0;
+	var xmax = 10000;
+	var ymin = 0;
+	var ymax = 10000;
+}
+
 
 // Update object position
 if 
@@ -65,5 +73,3 @@ if (keyboard_check_pressed(vk_tab)) {
 	fullscreen = !fullscreen;
 	window_set_fullscreen(fullscreen)
 }
-
-show_debug_message(y);

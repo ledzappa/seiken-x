@@ -72,7 +72,6 @@ if (place_meeting(x, y + vsp, oWalls) && (inst_wd_y == noone || inst_wd_y.is_sol
 	if (inst_wd_y) {
 		var d = inst_wd_y.y - y;
 		if (d > 8 && d < 15) {
-			show_debug_message(d);
 			y = y - d;
 		} else if (d < 8 && d > -27) {
 			y+=5;

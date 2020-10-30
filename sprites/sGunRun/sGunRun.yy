@@ -175,8 +175,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7b759480-487a-42d0-b228-407436d9b16a","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "gun",
+    "path": "folders/Sprites/gun.yy",
   },
   "resourceVersion": "1.0",
   "name": "sGunRun",

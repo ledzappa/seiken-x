@@ -80,8 +80,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4fa5e9c1-9c59-4a87-bc66-f2396a16a4dc","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "bosses",
+    "path": "folders/Sprites/bosses.yy",
   },
   "resourceVersion": "1.0",
   "name": "sBoss1phase2",

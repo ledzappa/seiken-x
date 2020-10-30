@@ -147,8 +147,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":41.0,"displayName":"default","resourceVersion":"1.0","name":"8d33c90b-9983-448e-9bc2-78ad5b937360","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "walls and doors",
+    "path": "folders/Sprites/walls and doors.yy",
   },
   "resourceVersion": "1.0",
   "name": "sWall",

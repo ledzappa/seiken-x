@@ -155,8 +155,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"4e9e5c3d-ea46-4f94-a11b-881e9c87d3b1","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "gun",
+    "path": "folders/Sprites/gun.yy",
   },
   "resourceVersion": "1.0",
   "name": "sGun",

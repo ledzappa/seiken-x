@@ -80,8 +80,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"123f0a86-21e2-4e37-bb05-3e32fadad731","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "bosses",
+    "path": "folders/Sprites/bosses.yy",
   },
   "resourceVersion": "1.0",
   "name": "sBoss1air",

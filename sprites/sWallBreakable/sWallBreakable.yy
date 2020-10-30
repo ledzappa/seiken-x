@@ -84,8 +84,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c5608be2-0912-44ef-ba3c-3a1ac2823958","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "walls and doors",
+    "path": "folders/Sprites/walls and doors.yy",
   },
   "resourceVersion": "1.0",
   "name": "sWallBreakable",

@@ -151,8 +151,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b16cc9c0-5a30-48dc-a49b-31cd67874d4b","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "gun",
+    "path": "folders/Sprites/gun.yy",
   },
   "resourceVersion": "1.0",
   "name": "sGunFall",

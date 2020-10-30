@@ -147,8 +147,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"fe3a0e2b-32fc-48a4-b7bd-0d2b2172a8d4","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "gun",
+    "path": "folders/Sprites/gun.yy",
   },
   "resourceVersion": "1.0",
   "name": "sGunJump",

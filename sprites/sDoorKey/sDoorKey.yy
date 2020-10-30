@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"09f3d7ff-7587-40d3-a292-4153d88f6a3d","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "walls and doors",
+    "path": "folders/Sprites/walls and doors.yy",
   },
   "resourceVersion": "1.0",
   "name": "sDoorKey",
