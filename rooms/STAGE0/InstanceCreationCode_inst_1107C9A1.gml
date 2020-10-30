@@ -1,4 +1,4 @@
-x_min = 3166;
-x_max = 3166+320;
-y_min = 192;
+x_min = 3168;
+x_max = x_min + 320;
+y_min = y_max - 180;
 y_max = 382;

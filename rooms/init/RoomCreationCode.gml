@@ -35,7 +35,7 @@ checkpointY = 0;
 checkpoint_cam_val = [];
 has_key1 = true;
 has_key2 = false;
-boss_door_unlocked = false;
+boss_door_unlocked = true;
 switches_aligned = 0;
 
 room_goto_next();

@@ -56,16 +56,19 @@ camera_set_view_pos(cam, x-view_w_half , y-view_w_height);
 if (xmin - x > 10) {
 	show_debug_message("sliding");
 	x = x + 8;
+} else if (x - xmax > 1) {
+	x = x - 8;
 } else {
 	x = clamp(x, xmin, xmax);
 }
 
-if (ymin - y > 20) {
-	y = y + 5;
+if (ymax + 10 < y) {
+	y = y - 5;
 } else {
 	y = clamp(y, ymin, ymax);
 }
-y = clamp(y, ymin, ymax);
+
+
 
 
 // Switch Between Fullscreen by toggling between 0 & 1
