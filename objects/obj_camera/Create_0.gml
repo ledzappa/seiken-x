@@ -1,8 +1,8 @@
 cam = view_camera[0];
 view_w_half = camera_get_view_width(cam) * 0.5;
 view_w_height = camera_get_view_height(cam) * 0.5;
-x_to = xstart;
-y_to = ystart;
+x_to = obj_player.x;
+y_to = obj_player.y;
 y_offset = 30;
 
 fullscreen = true;
