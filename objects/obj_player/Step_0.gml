@@ -216,7 +216,7 @@ if (move != 0) {
 }
 
 // if outside camera-y or out-of-hp
-if (y > obj_camera.y + 500) {
+if (y > oCamera.y + 500) {
   room_restart();
 }
 

@@ -1,3 +1,3 @@
-obj_camera.x_min = 560;
-obj_camera.x_max = 2000;
+oCamera.x_min = 560;
+oCamera.x_max = 2000;
 instance_destroy();

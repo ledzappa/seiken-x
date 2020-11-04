@@ -40,4 +40,4 @@ has_key2 = false;
 boss_door_unlocked = false;
 switches_aligned = 0;
 
-room_goto_next();
+room_goto(rMenu);

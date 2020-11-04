@@ -1,7 +1,7 @@
 ///open_dialog("Text", speed, x, y);
 function scr_opendialog(argument0, argument1, argument2, argument3) {
 
-	txt = instance_create_layer(argument2, argument3-200, "texts", obj_text);
+	txt = instance_create_layer(argument2, argument3-200, "texts", oText);
 
 	with (txt) {
 	  padding = 16;

@@ -1,4 +1,5 @@
 // Draw the current SFX volume
+/*
 if (activeSoundGroup == 0) {
   if (soundGroupOnly) {
     draw_text_color(
@@ -48,3 +49,4 @@ if (activeSoundGroup == 1) {
       alpha
     );
 }
+*/

@@ -34,8 +34,8 @@ restart_timer = 250;
 if (global.checkpointR == room) {
 	x = global.checkpointX;
 	y = global.checkpointY;
-	obj_camera.x_min = global.checkpoint_cam_val[0];	
-	obj_camera.x_max = global.checkpoint_cam_val[1];
-	obj_camera.y_min = global.checkpoint_cam_val[2];
-	obj_camera.y_max = global.checkpoint_cam_val[3];
+	oCamera.x_min = global.checkpoint_cam_val[0];	
+	oCamera.x_max = global.checkpoint_cam_val[1];
+	oCamera.y_min = global.checkpoint_cam_val[2];
+	oCamera.y_max = global.checkpoint_cam_val[3];
 }
