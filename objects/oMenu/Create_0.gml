@@ -3,3 +3,5 @@
 gui_width = display_get_gui_width();
 gui_height = display_get_gui_height();
 playing_sound = false;
+pressed_start = false;
+switch_room_timer = 300;
