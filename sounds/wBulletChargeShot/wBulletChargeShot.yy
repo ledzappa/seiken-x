@@ -13,8 +13,8 @@
   "soundFile": "wBulletChargeShot",
   "duration": 1.394433,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "weapons",
+    "path": "folders/Sounds/fx/weapons.yy",
   },
   "resourceVersion": "1.0",
   "name": "wBulletChargeShot",

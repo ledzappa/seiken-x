@@ -13,8 +13,8 @@
   "soundFile": "fxExplode1.ogg",
   "duration": 0.965,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "explosions",
+    "path": "folders/Sounds/fx/explosions.yy",
   },
   "resourceVersion": "1.0",
   "name": "fxExplode1",

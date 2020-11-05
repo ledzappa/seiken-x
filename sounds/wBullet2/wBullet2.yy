@@ -13,8 +13,8 @@
   "soundFile": "wBullet2",
   "duration": 0.563027,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "weapons",
+    "path": "folders/Sounds/fx/weapons.yy",
   },
   "resourceVersion": "1.0",
   "name": "wBullet2",

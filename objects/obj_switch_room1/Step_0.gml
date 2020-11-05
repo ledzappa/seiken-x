@@ -9,6 +9,7 @@ if (!start_pos_set) {
 
 if (place_meeting(x,y,obj_bullet) && switch_timer > 20 && !global.boss_door_unlocked) {
 	pos++;
+	audio_play_sound(fxSwitch2, 100, false);
 	image_angle += 90;
 	if (image_angle == 360) {
 		image_angle = 0;

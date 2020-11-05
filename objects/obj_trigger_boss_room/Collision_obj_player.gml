@@ -3,7 +3,6 @@
 if (timer == 200) {
 	start_timer = true;
 	freeze_inputs = true;
-  	camera_follow_object = obj_cam_1;
 	audio_stop_sound(global.active_soundtrack);
 	instance_create_layer(2512, 256, "walls", oDoorBoss);
 }

@@ -13,8 +13,8 @@
   "soundFile": "wItemHP",
   "duration": 1.723753,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "items",
+    "path": "folders/Sounds/fx/items.yy",
   },
   "resourceVersion": "1.0",
   "name": "wItemHP",

@@ -13,8 +13,8 @@
   "soundFile": "fxSwitch3",
   "duration": 1.52144,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "switches",
+    "path": "folders/Sounds/fx/switches.yy",
   },
   "resourceVersion": "1.0",
   "name": "fxSwitch3",

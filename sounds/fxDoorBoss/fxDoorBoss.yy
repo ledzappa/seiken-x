@@ -13,8 +13,8 @@
   "soundFile": "fxDoorBoss.wav",
   "duration": 0.161417,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "doors",
+    "path": "folders/Sounds/fx/doors.yy",
   },
   "resourceVersion": "1.0",
   "name": "fxDoorBoss",

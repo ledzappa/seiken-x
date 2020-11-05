@@ -13,8 +13,8 @@
   "soundFile": "fxEnemyDamage.wav",
   "duration": 0.457562,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "enemies",
+    "path": "folders/Sounds/fx/enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "fxEnemyDamage",

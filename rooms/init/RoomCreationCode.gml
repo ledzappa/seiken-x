@@ -1,11 +1,10 @@
-// set full screen
-//window_set_fullscreen(true);
 display_set_gui_size(320, 180);
 
 // DEV PURPOSE //
 globalvar enable_debug;
 globalvar skip_intro;
-skip_intro = false;
+skip_intro = true;
+fullscreen = true;
 
 
 // GAME STATE //
@@ -53,4 +52,5 @@ switches_aligned = 0;
 // sounds
 active_soundtrack = stMain;
 
+window_set_fullscreen(fullscreen);
 room_goto(skip_intro ? rStage1 : rMenu);

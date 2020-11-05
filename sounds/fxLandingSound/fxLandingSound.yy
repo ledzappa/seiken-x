@@ -13,8 +13,8 @@
   "soundFile": "fxLandingSound",
   "duration": 0.326429,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "player",
+    "path": "folders/Sounds/fx/player.yy",
   },
   "resourceVersion": "1.0",
   "name": "fxLandingSound",

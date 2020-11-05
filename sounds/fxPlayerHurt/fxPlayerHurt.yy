@@ -13,8 +13,8 @@
   "soundFile": "fxPlayerHurt.ogg",
   "duration": 0.965,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "player",
+    "path": "folders/Sounds/fx/player.yy",
   },
   "resourceVersion": "1.0",
   "name": "fxPlayerHurt",
