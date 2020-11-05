@@ -217,7 +217,7 @@ if (move != 0) {
 
 // if outside camera-y or out-of-hp
 if (y > oCamera.y + 500) {
-  room_restart();
+  scr_death();
 }
 
 if (doubleJump && doubleJumpTimer < doubleJumpTime) {

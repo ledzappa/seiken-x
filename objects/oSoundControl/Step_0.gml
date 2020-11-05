@@ -19,6 +19,13 @@ if (vUp || vDown) {
 	audio_play_sound(fxSwitch2,1000,false);
 }
 
+if (global.active_soundtrack != current_soundtrack) {
+	show_debug_message("play!!");
+	audio_stop_sound(current_soundtrack);
+	audio_play_sound(global.active_soundtrack, 1000, true);
+	current_soundtrack = global.active_soundtrack;
+}
+
 // change text
 showText = activeSoundGroup == 0 ? "SFX" : "Soundtrack";
 

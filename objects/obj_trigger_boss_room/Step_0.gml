@@ -7,6 +7,6 @@ if (start_timer) {
 if (timer == 0) {
 	freeze_inputs = false;
 	instance_create_layer(2280, 260, "enemies", oBoss1);
-	audio_play_sound(soundtrackStage1, 1000, true);
+	global.active_soundtrack = stMain;
 	instance_destroy();
 }

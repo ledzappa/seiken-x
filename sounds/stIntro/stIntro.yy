@@ -10,14 +10,14 @@
     "name": "audiogroup_soundtrack",
     "path": "audiogroups/audiogroup_soundtrack",
   },
-  "soundFile": "map2",
-  "duration": 31.5839577,
+  "soundFile": "stIntro.ogg",
+  "duration": 79.34384,
   "parent": {
     "name": "Soundtracks",
     "path": "folders/Sounds/Soundtracks.yy",
   },
   "resourceVersion": "1.0",
-  "name": "map2",
+  "name": "stIntro",
   "tags": [],
   "resourceType": "GMSound",
 }

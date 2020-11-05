@@ -3,12 +3,11 @@
 scr_getinput();
 
 if (key_pause) {
-	room_goto(rStage1);
-	audio_stop_sound(soundtrackStage1);
-	audio_play_sound(map2, 1000, true);
+	room_goto(rIntro);
+	audio_stop_sound(global.active_soundtrack);
 }
 
 if (!playing_sound) {
-	audio_play_sound(soundtrackStage1, 1000, true);
+	global.active_soundtrack = stMain;
 	playing_sound = true;
 }

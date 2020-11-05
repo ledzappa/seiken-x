@@ -24,5 +24,4 @@ alpha = 0;
 // Display soundgroup name
 showText = "";
 
-// Start the soundtrack
-alarm[0] = 10;
+current_soundtrack = noone;

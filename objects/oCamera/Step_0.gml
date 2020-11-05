@@ -54,7 +54,6 @@ camera_set_view_pos(cam, x-view_w_half , y-view_w_height);
 
 // slide camera to boundaries or clamp
 if (xmin - x > 10) {
-	show_debug_message("sliding");
 	x = x + 8;
 } else if (x - xmax > 1) {
 	x = x - 8;

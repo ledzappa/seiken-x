@@ -23,7 +23,7 @@ y = y + vsp;
 // fire bullet
 if (firingDelay < 0 && scr_objectinview(x, y)) {
 	firingDelay = 120;
-	with(instance_create_layer(x, y, "bullets", obj_enemybullet_passthrough)) {
+	with(instance_create_layer(x, y, "bullets", obj_enemybullet)) {
 		speed = 3;
 		rnd = random_range(-3, 3);
 		direction = point_direction(x, y, obj_player.x, obj_player.y) + rnd;

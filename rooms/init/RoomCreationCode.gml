@@ -1,9 +1,16 @@
 // set full screen
-window_set_fullscreen(true);
+//window_set_fullscreen(true);
 display_set_gui_size(320, 180);
 
-// general
+// DEV PURPOSE //
 globalvar enable_debug;
+globalvar skip_intro;
+skip_intro = false;
+
+
+// GAME STATE //
+
+// general
 globalvar camera_follow_object;
 globalvar grv;
 globalvar freeze_inputs;
@@ -21,6 +28,9 @@ globalvar has_key1;
 globalvar has_key2;
 globalvar boss_door_unlocked;
 globalvar switches_aligned;
+
+// sounds
+globalvar active_soundtrack;
 
 // init state
 enable_debug = false;
@@ -40,4 +50,7 @@ has_key2 = false;
 boss_door_unlocked = false;
 switches_aligned = 0;
 
-room_goto(rMenu);
+// sounds
+active_soundtrack = stMain;
+
+room_goto(skip_intro ? rStage1 : rMenu);

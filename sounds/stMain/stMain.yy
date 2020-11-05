@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 1.0,
+  "volume": 0.7,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -10,14 +10,14 @@
     "name": "audiogroup_soundtrack",
     "path": "audiogroups/audiogroup_soundtrack",
   },
-  "soundFile": "soundtrackStage1",
+  "soundFile": "stMain",
   "duration": 80.61568,
   "parent": {
     "name": "Soundtracks",
     "path": "folders/Sounds/Soundtracks.yy",
   },
   "resourceVersion": "1.0",
-  "name": "soundtrackStage1",
+  "name": "stMain",
   "tags": [],
   "resourceType": "GMSound",
 }
