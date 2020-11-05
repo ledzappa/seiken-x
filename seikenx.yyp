@@ -67,7 +67,7 @@
     {"id":{"name":"oKey1","path":"objects/oKey1/oKey1.yy",},"order":4,},
     {"id":{"name":"fxExplode0","path":"sounds/fxExplode0/fxExplode0.yy",},"order":0,},
     {"id":{"name":"fxBrake","path":"sounds/fxBrake/fxBrake.yy",},"order":9,},
-    {"id":{"name":"obj_player_static","path":"objects/obj_player_static/obj_player_static.yy",},"order":12,},
+    {"id":{"name":"oPlayerRunning","path":"objects/oPlayerRunning/oPlayerRunning.yy",},"order":0,},
     {"id":{"name":"sBoss1phase2","path":"sprites/sBoss1phase2/sBoss1phase2.yy",},"order":2,},
     {"id":{"name":"sDoorKey","path":"sprites/sDoorKey/sDoorKey.yy",},"order":0,},
     {"id":{"name":"fxLandingSound","path":"sounds/fxLandingSound/fxLandingSound.yy",},"order":0,},
@@ -218,6 +218,7 @@
     {"folderPath":"folders/Sounds/fx/weapons.yy","order":5,"resourceVersion":"1.0","name":"weapons","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sounds/fx/items.yy","order":6,"resourceVersion":"1.0","name":"items","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sounds/fx/enemies.yy","order":7,"resourceVersion":"1.0","name":"enemies","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/menus.yy","order":13,"resourceVersion":"1.0","name":"menus","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},
