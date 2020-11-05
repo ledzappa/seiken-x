@@ -1,11 +1,8 @@
-display_set_gui_size(320, 180);
-
-// DEV PURPOSE //
+// DEV  //
 globalvar enable_debug;
-globalvar skip_intro;
-skip_intro = true;
-fullscreen = true;
-
+var skip_intro = false;
+var fullscreen = false;
+var start_room = rStage1;
 
 // GAME STATE //
 
@@ -52,5 +49,7 @@ switches_aligned = 0;
 // sounds
 active_soundtrack = stMain;
 
+
 window_set_fullscreen(fullscreen);
-room_goto(skip_intro ? rStage1 : rMenu);
+display_set_gui_size(320, 180);
+room_goto(skip_intro ? start_room : rMenu);

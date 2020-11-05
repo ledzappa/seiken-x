@@ -67,6 +67,7 @@
     {"id":{"name":"oKey1","path":"objects/oKey1/oKey1.yy",},"order":4,},
     {"id":{"name":"fxExplode0","path":"sounds/fxExplode0/fxExplode0.yy",},"order":0,},
     {"id":{"name":"fxBrake","path":"sounds/fxBrake/fxBrake.yy",},"order":9,},
+    {"id":{"name":"obj_player_static","path":"objects/obj_player_static/obj_player_static.yy",},"order":12,},
     {"id":{"name":"sBoss1phase2","path":"sprites/sBoss1phase2/sBoss1phase2.yy",},"order":2,},
     {"id":{"name":"sDoorKey","path":"sprites/sDoorKey/sDoorKey.yy",},"order":0,},
     {"id":{"name":"fxLandingSound","path":"sounds/fxLandingSound/fxLandingSound.yy",},"order":0,},
