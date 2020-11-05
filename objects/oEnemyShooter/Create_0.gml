@@ -6,3 +6,5 @@ vsp = 0;
 hsp = 0;
 flash = 0;
 firingDelay = 0;
+fire_timer = 10;
+fire = false;

@@ -21,3 +21,6 @@ if (place_meeting(x, y + vsp, oWalls)) {
   vsp = 0;
 }
 y = y + vsp;
+
+// look left or right
+image_xscale = hsp > 0 ? 1 : -1;

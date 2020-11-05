@@ -4,7 +4,7 @@ switch_text_timer--;
 var length = array_length_1d(texts);
 
 if (switch_text_timer < 0 && !fade_out) {
-	switch_text_timer = 350;
+	switch_text_timer = 500;
 	current_text++;
 	
 	if (current_text >= length - 1) {
